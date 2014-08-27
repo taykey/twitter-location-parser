@@ -38,10 +38,10 @@ public class DefaultPupulateDB implements PopulateDB
     public void loadLocations(String filePath)
     {
 	    IterableFile iterator = new IterableFile(filePath);
-	    for (String cityText : iterator)
+	    for (String text : iterator)
         {
-	    	String[] fields = cityText.split("\t");
-	        locationDao.addLocation(new Location(fields[0],fields[1],fields[2],LocationType.valueOf(fields[3])));
+	    	String[] fields = text.split("\t");
+	        locationDao.addLocation(new Location(fields[0],fields[1],fields[2],LocationType.valueOf(fields[3]), Integer.parseInt(fields[4])));
         }
     }
 

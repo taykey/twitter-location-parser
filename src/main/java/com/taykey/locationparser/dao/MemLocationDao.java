@@ -59,10 +59,11 @@ public class MemLocationDao implements LocationDao
 	public void addLocation(Location location)
     {
 		String alternateNames = location.getAlternateNames();
+		alternateNames += ","+location.getName();
 		String[] names = alternateNames.split(",");
 		for (String name : names)
         {
-	        List<Location> list = locations.get(name);
+	        List<Location> list = locations.get(name.toLowerCase());
 	        if (list == null)
 	        {
 	        	list = new ArrayList<Location>();

@@ -10,16 +10,19 @@ public class Location
 	
 	private LocationType type;
 	
+	private int population;
+	
 	public Location()
     {
     }
 	
-	public Location(String name, String alternateNames, String countryCode, LocationType type)
+	public Location(String name, String alternateNames, String countryCode, LocationType type, int population)
     {
 		this.name = name;
 		this.alternateNames = alternateNames;
 		this.countryCode = countryCode;
 		this.type = type;
+		this.population = population;
     }
 
 	public String getName()
@@ -61,6 +64,16 @@ public class Location
 	{
 		this.type = type;
 	}
+	
+	public int getPopulation()
+    {
+	    return this.population;
+    }
+	
+	public void setPopulation(int population)
+    {
+	    this.population = population;
+    }
 
 	@Override
     public int hashCode()
@@ -70,6 +83,7 @@ public class Location
 	    result = prime * result + ( (this.alternateNames == null) ? 0 : this.alternateNames.hashCode());
 	    result = prime * result + ( (this.countryCode == null) ? 0 : this.countryCode.hashCode());
 	    result = prime * result + ( (this.name == null) ? 0 : this.name.hashCode());
+	    result = prime * result + this.population;
 	    result = prime * result + ( (this.type == null) ? 0 : this.type.hashCode());
 	    return result;
     }
@@ -105,6 +119,8 @@ public class Location
 	    }
 	    else if (!this.name.equals(other.name))
 		    return false;
+	    if (this.population != other.population)
+		    return false;
 	    if (this.type != other.type)
 		    return false;
 	    return true;
@@ -116,6 +132,6 @@ public class Location
 	    return "Location [" + (this.name != null ? "name=" + this.name + ", " : "") +
 	            (this.alternateNames != null ? "alternateNames=" + this.alternateNames + ", " : "") +
 	            (this.countryCode != null ? "countryCode=" + this.countryCode + ", " : "") +
-	            (this.type != null ? "type=" + this.type : "") + "]";
+	            (this.type != null ? "type=" + this.type + ", " : "") + "population=" + this.population + "]";
     }
 }

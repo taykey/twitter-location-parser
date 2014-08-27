@@ -17,7 +17,7 @@ public class TestLocationParser
 	public void parseTextTest()
 	{
 		int c = 0;
-		IterableFile iterableFile = new IterableFile("/mnt/taykey/dev/udy/test/data/input_test_2.txt");
+		IterableFile iterableFile = new IterableFile("src/test/resources/large_input_test.txt");
 		List<String> strings = new ArrayList<String>();
 		for (String string : iterableFile)
         {
@@ -27,14 +27,13 @@ public class TestLocationParser
 		for (String string : strings)
         {
 			String parseText = locationParser.parseText(string);
-			if (parseText != null)
-			{	
-				c++;
-				System.out.println(parseText +"\t\t\t\t"+string);
-			}
+			c = parseText == null ? c : c+1;
+//			System.out.println(parseText +"\t\t\t\t"+string);
         }
 		time = System.currentTimeMillis() - time;
 		System.out.println("took: "+time+" to parse "+strings.size()+" lines. num of location found is: " + c);
+		int avgPerSeconds = (int) (strings.size() / (time /1000.0));
+		System.out.println("avgPerSeconds: "+avgPerSeconds);
 		
 	}
 	
@@ -43,7 +42,7 @@ public class TestLocationParser
 	public void parseSingleTextTest()
 	{
 		long time = System.currentTimeMillis();
-		String string = "New York";
+		String string = "London";
 		String parseText = locationParser.parseText(string);
 		time = System.currentTimeMillis() - time;
 		System.out.println();
