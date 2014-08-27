@@ -15,26 +15,6 @@ public class DefaultPupulateDB implements PopulateDB
     }
 	
 	@Override
-    public void loadCities(String filePath)
-    {
-	    IterableFile iterator = new IterableFile(filePath);
-	    for (String city : iterator)
-        {
-	        locationDao.addCity(city.toLowerCase());
-        }
-    }
-
-	@Override
-    public void loadCountries(String filePath)
-    {
-		IterableFile iterator = new IterableFile(filePath);
-	    for (String country : iterator)
-        {
-	        locationDao.addCountry(country.toLowerCase());
-        }
-    }
-	
-	@Override
     public void loadLocations(String filePath)
     {
 	    IterableFile iterator = new IterableFile(filePath);
