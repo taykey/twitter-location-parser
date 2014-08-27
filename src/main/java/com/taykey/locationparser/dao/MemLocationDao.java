@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.Set;
 
 import com.taykey.locationparser.dto.Location;
+import com.taykey.locationparser.dto.LocationType;
 
 public class MemLocationDao implements LocationDao
 {
@@ -70,8 +71,18 @@ public class MemLocationDao implements LocationDao
 	        	locations.put(name.toLowerCase(),list);
 	        }
 	        list.add(location);
-	        
         }
+		
+		if (LocationType.Country.equals(location.getType()))
+		{
+			List<Location> list = locations.get(location.getCountryCode());
+	        {
+	        	list = new ArrayList<Location>();
+	        	locations.put(location.getCountryCode(),list);
+	        }
+	        list.add(location);
+		}
+		
     }
 	
 	@Override
@@ -80,4 +91,9 @@ public class MemLocationDao implements LocationDao
 	    return locations.get(location.toLowerCase());
     }
 
+	@Override
+    public List<Location> getCountryByCode(String countryCode)
+    {
+	    return locations.get(countryCode);
+    }
 }

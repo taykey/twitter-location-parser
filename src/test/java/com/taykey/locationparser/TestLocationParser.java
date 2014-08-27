@@ -28,7 +28,7 @@ public class TestLocationParser
         {
 			String parseText = locationParser.parseText(string);
 			c = parseText == null ? c : c+1;
-//			System.out.println(parseText +"\t\t\t\t"+string);
+			System.out.println(parseText +"\t\t\t\t"+string);
         }
 		time = System.currentTimeMillis() - time;
 		System.out.println("took: "+time+" to parse "+strings.size()+" lines. num of location found is: " + c);
@@ -42,7 +42,7 @@ public class TestLocationParser
 	public void parseSingleTextTest()
 	{
 		long time = System.currentTimeMillis();
-		String string = "London";
+		String string = "Bahía Blanca";
 		String parseText = locationParser.parseText(string);
 		time = System.currentTimeMillis() - time;
 		System.out.println();

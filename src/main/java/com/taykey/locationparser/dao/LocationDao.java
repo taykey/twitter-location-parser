@@ -19,5 +19,7 @@ public interface LocationDao
 	void addLocation(Location location);
 	
 	List<Location> getLocation(String location);
+
+	List<Location> getCountryByCode(String countryCode);
 	
 }

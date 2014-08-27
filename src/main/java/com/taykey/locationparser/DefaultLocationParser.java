@@ -21,9 +21,8 @@ public class DefaultLocationParser implements LocationParser
 	{
 		this.locationDao = locationDao;
 		PopulateDB populateDB = new DefaultPupulateDB(locationDao);
-		//populateDB.loadCountries("/mnt/taykey/dev/udy/test/data/countries.csv");
-		//populateDB.loadCities("/mnt/taykey/dev/udy/test/data/cities_.csv");
 		populateDB.loadLocations("data/countries_v3.csv");
+		populateDB.loadLocations("data/states_v3.csv");
 		populateDB.loadLocations("data/cities_v3.csv");
 	}
 
@@ -36,11 +35,27 @@ public class DefaultLocationParser implements LocationParser
 		Set<Location> countryCandidates = new HashSet<Location>();
 		Set<Location> stateCandidates = new HashSet<Location>();
 		Set<Location> cityCandidates = new HashSet<Location>();
+		List<String> wordsWithLocation = new ArrayList<String>();
 		for (String word: words)
 		{
+			boolean contained = false;
+			for (String prevWord : wordsWithLocation)
+            {
+	            if (prevWord.contains(word))
+	            {
+	            	contained = true;
+	            	break;
+	            }
+            }
+			if (contained)
+			{
+				continue;
+			}
+			
 			List<Location> locations = locationDao.getLocation(word);
 			if (locations == null)
 				continue;
+			wordsWithLocation.add(word);
 			for (Location location : locations)
             {
 				switch (location.getType())
@@ -59,6 +74,19 @@ public class DefaultLocationParser implements LocationParser
 					
             }
 		}
+
+		if (cityCandidates.size() == 1)
+		{
+			// in this point we are sure about which city we have. we need to get the right country. 
+			Location city = new ArrayList<Location>(cityCandidates).get(0);
+			String countryStr = city.getCountryCode();
+			List<Location> countries = locationDao.getCountryByCode(countryStr);
+			if (countries != null)
+				countryStr = countries.get(0).getName();
+			return  city.getName()+","+countryStr;
+			
+		}
+		
 		if (countryCandidates.size() == 1)
 		{
 			// in this point we are sure about which country we have. we need to check if there is also a city.
@@ -66,15 +94,15 @@ public class DefaultLocationParser implements LocationParser
 			return country.getName();
 		}
 		
-		if (cityCandidates.size() == 1)
+		if (stateCandidates.size() == 1)
 		{
 			// in this point we are sure about which city we have. we need to get the right country. 
-			Location city = new ArrayList<Location>(cityCandidates).get(0);
-			String countryStr = city.getCountryCode();
-			List<Location> countries = locationDao.getLocation(countryStr);
+			Location state = new ArrayList<Location>(stateCandidates).get(0);
+			String countryStr = state.getCountryCode();
+			List<Location> countries = locationDao.getCountryByCode(countryStr);
 			if (countries != null)
 				countryStr = countries.get(0).getName();
-			return  city.getName()+","+countryStr;
+			return  state.getName()+","+countryStr;
 			
 		}
 		
@@ -82,7 +110,6 @@ public class DefaultLocationParser implements LocationParser
 		{
 			// in this point we are sure about which city we have. we need to get the right country. 
 			//System.out.println(cityCandidates+ " "+countryCandidates);
-			citiesCountries+=1;
 			return null;
 		}
 
@@ -120,20 +147,16 @@ public class DefaultLocationParser implements LocationParser
 		{
 			// in this point we are sure about which city we have. we need to get the right country. 
 		//	System.out.println(countryCandidates);
-			countries+=1;
 		}
 
 		return null;
 
 	}
-	private int citiesCountries = 0;
-	private int cities = 0;
-	private int countries = 0;
 
 	private List<String> ngrams(String text, int n)
 	{
 		List<String> ngrams = new ArrayList<String>();
-		String[] twords = text.split("\\W", 0);
+		String[] twords = text.split("\\P{L}", 0);
 		int l = 0;
 		for (int i = 0; i < twords.length; i++ ){ if (!twords[i].trim().isEmpty()) l++;}
 		String[] words = new String[l];
