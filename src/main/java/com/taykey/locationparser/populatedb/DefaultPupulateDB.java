@@ -19,8 +19,8 @@ public class DefaultPupulateDB implements PopulateDB {
 	for (String text : iterator) {
 	    String[] fields = text.split("\t");
 	    locationDao.addLocation(new Location(fields[0], fields[1],
-		    fields[2], LocationType.valueOf(fields[3]), Integer
-			    .parseInt(fields[4])));
+		    fields[2], fields[3], LocationType.valueOf(fields[4]), Integer
+			    .parseInt(fields[5])));
 	}
     }
 

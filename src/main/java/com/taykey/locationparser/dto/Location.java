@@ -6,6 +6,8 @@ public class Location {
 
     private String alternateNames;
 
+    private String stateCode;
+
     private String countryCode;
 
     private LocationType type;
@@ -16,10 +18,11 @@ public class Location {
     }
 
     public Location(String name, String alternateNames, String countryCode,
-	    LocationType type, int population) {
+	    String stateCode, LocationType type, int population) {
 	this.name = name;
 	this.alternateNames = alternateNames;
 	this.countryCode = countryCode;
+	this.stateCode = stateCode;
 	this.type = type;
 	this.population = population;
     }
@@ -38,6 +41,14 @@ public class Location {
 
     public void setAlternateNames(String alternateNames) {
 	this.alternateNames = alternateNames;
+    }
+
+    public String getStateCode() {
+	return this.stateCode;
+    }
+
+    public void setStateCode(String stateCode) {
+	this.stateCode = stateCode;
     }
 
     public String getCountryCode() {
@@ -79,6 +90,8 @@ public class Location {
 		+ ((this.name == null) ? 0 : this.name.hashCode());
 	result = prime * result + this.population;
 	result = prime * result
+		+ ((this.stateCode == null) ? 0 : this.stateCode.hashCode());
+	result = prime * result
 		+ ((this.type == null) ? 0 : this.type.hashCode());
 	return result;
     }
@@ -109,6 +122,11 @@ public class Location {
 	    return false;
 	if (this.population != other.population)
 	    return false;
+	if (this.stateCode == null) {
+	    if (other.stateCode != null)
+		return false;
+	} else if (!this.stateCode.equals(other.stateCode))
+	    return false;
 	if (this.type != other.type)
 	    return false;
 	return true;
@@ -120,9 +138,12 @@ public class Location {
 		+ (this.name != null ? "name=" + this.name + ", " : "")
 		+ (this.alternateNames != null ? "alternateNames="
 			+ this.alternateNames + ", " : "")
+		+ (this.stateCode != null ? "stateCode=" + this.stateCode
+			+ ", " : "")
 		+ (this.countryCode != null ? "countryCode=" + this.countryCode
 			+ ", " : "")
 		+ (this.type != null ? "type=" + this.type + ", " : "")
 		+ "population=" + this.population + "]";
     }
+
 }

@@ -10,6 +10,8 @@ public interface LocationDao {
 
     List<Location> getLocation(String location);
 
-    List<Location> getCountryByCode(String countryCode);
+    Location getCountryByCode(String countryCode);
+
+    Location getStateByCode(String stateCode);
 
 }

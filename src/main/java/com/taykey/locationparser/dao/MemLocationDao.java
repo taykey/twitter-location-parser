@@ -11,6 +11,10 @@ import com.taykey.locationparser.dto.LocationType;
 public class MemLocationDao implements LocationDao {
 
     Map<String, List<Location>> locations = new HashMap<String, List<Location>>();
+    
+    Map<String, Location> countries = new HashMap<String, Location>();
+    
+    Map<String, Location> states = new HashMap<String, Location>();
 
     public MemLocationDao() {
     }
@@ -30,14 +34,12 @@ public class MemLocationDao implements LocationDao {
 	}
 
 	if (LocationType.Country.equals(location.getType())) {
-	    List<Location> list = locations.get(location.getCountryCode());
-	    {
-		list = new ArrayList<Location>();
-		locations.put(location.getCountryCode(), list);
-	    }
-	    list.add(location);
+	    countries.put(location.getCountryCode(), location);
 	}
-
+	
+	if (LocationType.State.equals(location.getType())) {
+	    states.put(location.getStateCode(), location);
+	}
     }
 
     @Override
@@ -46,7 +48,12 @@ public class MemLocationDao implements LocationDao {
     }
 
     @Override
-    public List<Location> getCountryByCode(String countryCode) {
-	return locations.get(countryCode);
+    public Location getCountryByCode(String countryCode) {
+	return countries.get(countryCode);
+    }
+    
+    @Override
+    public Location getStateByCode(String stateCode) {
+	return states.get(stateCode);
     }
 }

@@ -26,7 +26,7 @@ public class TestLocationParser {
 	for (String string : strings) {
 	    String parseText = locationParser.parseText(string);
 	    c = parseText == null ? c : c + 1;
-	    System.out.println(parseText + "\t\t\t\t" + string);
+	  //  System.out.println(parseText + "\t\t\t\t" + string);
 	}
 	time = System.currentTimeMillis() - time;
 	System.out.println("took: " + time + " to parse " + strings.size()
