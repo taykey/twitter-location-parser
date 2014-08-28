@@ -5,96 +5,68 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.Iterator;
 
-public class IterableFile implements Iterable<String>
-{
+public class IterableFile implements Iterable<String> {
 
-	// Used by the TextFileIterator class below
-	final String filename;
+    // Used by the TextFileIterator class below
+    final String filename;
 
+    public IterableFile(String filename) {
+	this.filename = filename;
+    }
 
+    // This is the one method of the Iterable interface
+    public Iterator<String> iterator() {
+	return new FileIterator();
+    }
 
-	public IterableFile(String filename)
-	{
-		this.filename = filename;
+    // This non-static member class is the iterator implementation
+    class FileIterator implements Iterator<String> {
+
+	// The stream we're reading from
+	BufferedReader in;
+
+	// Return value of next call to next()
+	String nextline;
+
+	public FileIterator() {
+	    // Open the file and read and remember the first line.
+	    // We peek ahead like this for the benefit of hasNext().
+	    try {
+		in = new BufferedReader(new FileReader(filename));
+		nextline = in.readLine();
+	    } catch (IOException e) {
+		throw new IllegalArgumentException(e);
+	    }
 	}
 
-
-
-	// This is the one method of the Iterable interface
-	public Iterator<String> iterator()
-	{
-		return new FileIterator();
+	// If the next line is non-null, then we have a next line
+	public boolean hasNext() {
+	    return nextline != null;
 	}
 
-	// This non-static member class is the iterator implementation
-	class FileIterator implements Iterator<String>
-	{
+	// Return the next line, but first read the line that follows it.
+	public String next() {
+	    try {
+		String result = nextline;
 
-		// The stream we're reading from
-		BufferedReader in;
-
-		// Return value of next call to next()
-		String nextline;
-
-
-
-		public FileIterator()
-		{
-			// Open the file and read and remember the first line.
-			// We peek ahead like this for the benefit of hasNext().
-			try
-			{
-				in = new BufferedReader(new FileReader(filename));
-				nextline = in.readLine();
-			}
-			catch (IOException e)
-			{
-				throw new IllegalArgumentException(e);
-			}
+		// If we haven't reached EOF yet
+		if (nextline != null) {
+		    nextline = in.readLine(); // Read another line
+		    if (nextline == null)
+			in.close(); // And close on EOF
 		}
 
-
-
-		// If the next line is non-null, then we have a next line
-		public boolean hasNext()
-		{
-			return nextline != null;
-		}
-
-
-
-		// Return the next line, but first read the line that follows it.
-		public String next()
-		{
-			try
-			{
-				String result = nextline;
-
-				// If we haven't reached EOF yet
-				if (nextline != null)
-				{
-					nextline = in.readLine(); // Read another line
-					if (nextline == null)
-						in.close(); // And close on EOF
-				}
-
-				// Return the line we read last time through.
-				return result;
-			}
-			catch (IOException e)
-			{
-				throw new IllegalArgumentException(e);
-			}
-		}
-
-
-
-		// The file is read-only; we don't allow lines to be removed.
-		public void remove()
-		{
-			throw new UnsupportedOperationException();
-		}
+		// Return the line we read last time through.
+		return result;
+	    } catch (IOException e) {
+		throw new IllegalArgumentException(e);
+	    }
 	}
 
+	// The file is read-only; we don't allow lines to be removed.
+	public void remove() {
+	    throw new UnsupportedOperationException();
+	}
+    }
 
 }
