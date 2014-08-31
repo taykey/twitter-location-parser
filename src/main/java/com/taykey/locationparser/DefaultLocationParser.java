@@ -7,6 +7,9 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.taykey.locationparser.dao.LocationDao;
 import com.taykey.locationparser.dto.Location;
 import com.taykey.locationparser.dto.LocationType;
@@ -15,6 +18,8 @@ import com.taykey.locationparser.populatedb.PopulateDB;
 
 public class DefaultLocationParser implements LocationParser {
 
+    private static Logger log = LoggerFactory.getLogger(DefaultLocationParser.class);
+    
     private LocationDao locationDao;
 
     public DefaultLocationParser(LocationDao locationDao) {
@@ -29,22 +34,16 @@ public class DefaultLocationParser implements LocationParser {
     public String parseText(String text) {
 	List<String> words = ngrams(text, 3);
 	Map<LocationType, Set<Location>> candidates = new HashMap<LocationType, Set<Location>>();
-	List<String> wordsWithLocation = new ArrayList<String>();
+	Set<String> wordsWithLocation = new HashSet<String>();
 	for (String word : words) {
-	    boolean contained = false;
-	    for (String prevWord : wordsWithLocation) {
-		if (prevWord.contains(word)) {
-		    contained = true;
-		    break;
-		}
-	    }
-	    if (contained) {
+	    if (isContained(wordsWithLocation, word)) {
 		continue;
 	    }
 
 	    List<Location> locations = locationDao.getLocation(word);
-	    if (locations == null)
+	    if (locations == null) {
 		continue;
+	    }
 	    wordsWithLocation.add(word);
 	    for (Location location : locations) {
 		Set<Location> set = candidates.get(location.getType());
@@ -56,6 +55,12 @@ public class DefaultLocationParser implements LocationParser {
 	    }
 	}
 
+	return getLocationFromCandidates(text, candidates);
+
+    }
+
+    private String getLocationFromCandidates(String text,
+	    Map<LocationType, Set<Location>> candidates) {
 	if (candidates.get(LocationType.City) != null && candidates.get(LocationType.City).size() == 1) {
 	    // in this point we are sure about which city we have. we need to
 	    // get the right country.
@@ -66,7 +71,7 @@ public class DefaultLocationParser implements LocationParser {
 	    if (stateCode != null) {
 		stateCode = state.getName();
 	    } else {
-		System.out.println("city with no state");
+		log.debug("found city with no state. text: {}. city: {}", text, city);
 	    }
 
 	    String countryCode = city.getCountryCode();
@@ -74,7 +79,7 @@ public class DefaultLocationParser implements LocationParser {
 	    if (country != null) {
 		countryCode = country.getName();
 	    } else {
-		System.out.println("city with no country");
+		log.debug("found city with no country. text: {}. city: {}", text, city);
 	    }
 
 	    return city.getName() + "," + stateCode + "," + countryCode;
@@ -99,7 +104,7 @@ public class DefaultLocationParser implements LocationParser {
 	    if (country != null) {
 		countryStr = country.getName();
 	    } else {
-		System.out.println("state with no country");
+		log.debug("found state with no country. text: {}. state: {}", text, state);
 	    }
 
 	    return state.getName() + "," + countryStr;
@@ -128,7 +133,7 @@ public class DefaultLocationParser implements LocationParser {
 		if (stateCode != null) {
 		    stateCode = state.getName();
 		} else {
-		    System.out.println("city with no state");
+		    log.debug("found city with no state. text: {}. city: {}", text, max);
 		}
 
 		String countryCode = max.getCountryCode();
@@ -136,7 +141,7 @@ public class DefaultLocationParser implements LocationParser {
 		if (country != null) {
 		    countryCode = country.getName();
 		} else {
-		    System.out.println("city with no country");
+		    log.debug("found city with no country. text: {}. city: {}", text, max);
 		}
 
 		return max.getName() + "," + stateCode + "," + countryCode;
@@ -145,9 +150,20 @@ public class DefaultLocationParser implements LocationParser {
 	}
 
 	return null;
-
     }
 
+    private boolean isContained(Set<String> wordsWithLocation, String word) {
+	boolean contained = false;
+	for (String prevWord : wordsWithLocation) {
+	if (prevWord.contains(word)) {
+	    contained = true;
+	    break;
+	}
+	}
+	return contained;
+    }
+
+    
     private List<String> ngrams(String text, int n) {
 	List<String> ngrams = new ArrayList<String>();
 	String[] twords = text.split("\\P{L}", 0);
