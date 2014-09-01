@@ -210,11 +210,11 @@ Astara District	Astara,Astara District,Astara Rayonu,Astarinskiy Rayon	AZ	08	Sta
 Xocalı Rayonu	Askeranskiy Rayon,Stepanakert Rayonu,Stepanakertskiy Rayon,Xocali,Xocali Rayonu,Xocalı,Xocalı Rayonu	AZ	64	State	24787
 Aghjabadi Rayon	Agcabadi Rayonu,Agdzhabedinskiy Rayon,Aghjabadi Rayonu,Aghjabädi Rayonu,Ağcabǝdi,Ağcabədi Rayonu	AZ	02	State	0
 Aghdam Rayon	Agdam,Agdam Rayonu,Agdamskiy Rayon,Aghdam Rayonu,Ağdam,Ağdam Rayonu	AZ	03	State	165407
-Ali Bajramly	Ali Bayramli Sahari,Əli Bayramli,Əli Bayramlı Şəhəri	AZ	07	State	81200
+Shirvan	Shirvan,Əli Bayramli,Əli Bayramli Səhəri,Əli Bayramlı Şəhəri	AZ	07	State	81200
 Lənkəran Şəhəri	Lankaran,Lankaran Sahari,Lǝnkǝran,Lənkəran,Lənkəran Şəhəri	AZ	30	State	0
 Şuşa Şəhəri	Susa,Susa Sahari,Şuşa,Şuşa Şəhəri	AZ	56	State	4200
 Tartar Rayon	Tartar Rayonu,Tǝrtǝr,Tərtər Rayonu	AZ	57	State	0
-Xankəndi Şəhəri	Xankandi,Xankandi Sahari,Xankǝndi,Xankəndi,Xankəndi Şəhəri	AZ	61	State	0
+Xankəndi Şəhəri	Stepanakert,Stepʻanakert,Xankandi,Xankandi Sahari,Xankǝndi,Xankəndi,Xankəndi Şəhəri,Ստեփանակերտ	AZ	61	State	0
 Xocavənd Rayonu	Xocavand,Xocavand Rayonu,Xocavǝnd,Xocavənd,Xocavənd Rayonu	AZ	65	State	0
 Zardab Rayon	Zardab,Zardab Rayonu,Zardobskij Rajon,Zardobskiy Rayon,Zərdab,Zərdab Rayonu,Зардобский Район	AZ	71	State	0
 Zaqatala Rayon	Zakatal'skiy Rayon,Zakatal’skiy Rayon,Zaqatala,Zaqatala Rayonu	AZ	70	State	111419
@@ -237,7 +237,7 @@ Goranboy Rayon	Goranboy,Goranboy Rayonu,Kasum-Ismailovskiy Rayon,Qasym Ismayylov
 Qakh Rayon	Kakhskiy Rayon,Qakh Rayonu,Qax Rayonu,Qǝx	AZ	39	State	53246
 Ismayilli Rayon	Ismaillinskiy Rayon,Ismayilli,Ismayilli Rayonu,Ismayylly Rayonu,İsmayıllı,İsmayıllı Rayonu	AZ	25	State	76184
 Goychay Rayon	Geokchayskiy Rayon,Goeycay,Goycay Rayonu,Goychay Rayonu,Göychay Rayonu,Göyçay,Göyçay Rayonu	AZ	22	State	105323
-Davachi Rayon	Davachi Rayonu,Davaci Rayonu,Divichinskiy Rayon,Dävächi Rayonu,Dǝvǝçi,Dəvəçi Rayonu,Sabran Rayonu,Shabran Rayon,Şabran Rayonu	AZ	17	State	0
+Shabran Rayon	Daevaechi Rayonu,Divichinskiy Rayon,Dävächi Rayonu,Dǝvǝci,Dǝvǝçi,Dəvəci Rayonu,Dəvəçi Rayonu,Sabran Rayonu,Shabran,Shabran District,Shabran Rayon,Şabran Rayonu	AZ	17	State	0
 Dashkasan Rayon	Dashkasan Rayonu,Dashkesanskiy Rayon,Dashkäsän Rayonu,Daskasan Rayonu,Dastafyurskiy Rayon,Daşkǝsǝn,Daşkəsən Rayonu	AZ	16	State	0
 Balakan Rayon	Balakan Rayonu,Balakǝn,Balakən Rayonu,Belokanskiy Rayon	AZ	10	State	0
 Barda Rayon	Barda Rayonu,Bardinskiy Rayon,Bǝrdǝ,Bərdə Rayonu	AZ	11	State	0
@@ -422,13 +422,13 @@ New Providence District	New Providence	BS	23	State	228334
 Mayaguana District	Mayaguana,Mayaguana District	BS	16	State	251
 Marsh Harbour District	Marsh Harbour	BS	31	State	0
 Long Island	Long Island,Long Island District	BS	15	State	2979
-Kemps Bay District	Kemps Bay	BS	30	State	0
+Kemps Bay District	Kemps Bay	BS	30	State	1660
 Inagua	IGA,Inagua,Inagua District	BS	13	State	0
 High Rock District	High Rock	BS	29	State	0
 Harbour Island District	Harbour Island,Harbour Island District	BS	22	State	1751
 Green Turtle Cay District	Green Turtle Cay,Green Turtle Cay District	BS	28	State	0
 Governor's Harbour District (historical)	GHB,Governor's Harbour,Governor's Harbour District	BS	27	State	0
-Fresh Creek District	Fresh Creek,Fresh Creek District	BS	26	State	0
+Fresh Creek District	Fresh Creek,Fresh Creek District	BS	26	State	2576
 City of Freeport District	City of Freeport,City of Freeport District,Freeport,Freeport District	BS	25	State	0
 Exuma District	Exuma,Exuma District	BS	10	State	0
 Cat Island	Cat Island	BS	06	State	1606
@@ -474,14 +474,14 @@ Wangdue Phodrang Dzongkhag	Wangdi Phodrang,Wangdi Phodrang Dzongkhag,Wangdu Phod
 Gasa	Gasa,Gasa District	BT	23	State	3500
 Trashi Yangste	Trashi Yangste,Trashiyangtse District	BT	24	State	0
 Southern District	Ngwaketse District,Ngwaketsi,Southern,Southern District	BW	10	State	179888
-South East District	South East,South East District	BW	09	State	0
+South East District	South East,South East District	BW	09	State	276319
 North East District	Francistown District,North East,North East District,Tati Concession	BW	08	State	89979
 North West District	Ngamiland District,North West,North West District	BW	11	State	81978
-Kweneng District	Kuneneng,Kweneng,Kweneng District	BW	06	State	0
+Kweneng District	Kuneneng,Kweneng,Kweneng District	BW	06	State	230335
 Kgatleng District	Kgatlen,Kgatleng,Kgatleng District,Mochudi	BW	05	State	79665
-Kgalagadi District	Kgalagadi,Kgalagadi District,Kgalazadi	BW	04	State	0
+Kgalagadi District	Kgalagadi,Kgalagadi District,Kgalazadi	BW	04	State	42049
 Ghanzi District	Ghanzi,Ghanzi District,Khanzi	BW	03	State	36675
-Central District	Central,Central District,Ngwati District,Ngwato	BW	01	State	0
+Central District	Central,Central District,Ngwati District,Ngwato	BW	01	State	188174
 Vitebskaya Oblast’	Vicebskaja Voblasc',Vitebsk Oblast,Vitebskaja Oblast',Vitebskaya Oblast',Vitebskaya Oblast’,Vitsyebskaya Voblasts',Vitsyebskaya Voblastsʼ,Vitsyebskaya Voblasts’,Витебская Oбласть,Віцебская Вобласць	BY	07	State	0
 Mogilëvskaya Oblast’	Magiljouskaja Voblasc',Mahilyowskaya Voblasts',Mahilyowskaya Voblastsʼ,Mahilyowskaya Voblasts’,Mogilev Oblast,Mogilevskaja oblast',Mogilevskaya Oblast',Mogiljovskaja Oblast',Mogilëv Oblast,Mogilëvskaya Oblast’,Магілёўская Вобласць,Могилевская область,Могилёвская Oбласть	BY	06	State	0
 Minskaja Voblasts’	Minskaja Oblast',Minskaja Voblasc',Minskaya Voblasts',Minskaya Voblasts’,Минская Область,Мінская Вобласць	BY	05	State	0
@@ -537,7 +537,7 @@ Préfecture de la Kémo	Kemo,Kemo-Gribingui,Kémo,Kémo-Gribingui,Prefecture de 
 Mambéré-Kadéï	Mambere Kadei,Mambere-Kadei,Mambere-Kadejus,Mamberė-Kadėjus,Mambéré-Kadéï,Prefecture de Haute-Sangha,Prefecture de la Mambere-Kadei,Prefektura Mambere-Kadei,Prefektura Mambéré-Kadéï,Prefettura di Mambere-Kadei,Prefettura di Mambéré-Kadéï,Préfecture de Haute-Sangha,Préfecture de la Mambéré-Kadéï,Sese ti koemaenda-koetae ti Mambere-Kadei,Sêse tî kömändâ-kötä tî Mambere-Kadei,mambelekadei ju,mambrh kadyy,man bei lei-ka dai sheng,Мамбере-Кадеи,مامبره کادئی,マンベレ・カデイ州,曼貝雷-卡代省,맘베레카데이 주	CF	04	State	299555
 Préfecture de la Nana-Grébizi	Gribingui,Gribingui Economique,Nana-Grebizi,Nana-Gribingui,Nana-Grébizi,Prefecture de Gribingui,Prefecture de Nana-Grebizi,Prefecture de la Nana-Grebizi,Préfecture de Gribingui,Préfecture de Nana-Grébizi,Préfecture de la Nana-Grébizi	CF	15	State	0
 Commune de Bangui	Bangui,Commune de Bangui	CF	18	State	542393
-Sangha	Departement de la Sangha,Département de la Sangha,La Sangha,Region de la Sangha,Région de la Sangha,Sangha,Sangha-Likouala	CG	10	State	0
+Sangha	Departement de la Sangha,Département de la Sangha,La Sangha,Region de la Sangha,Région de la Sangha,Sangha,Sangha-Likouala	CG	10	State	85738
 Pool	Departement du Pool,Djoue,Djoué,Département du Pool,Le Pool,Pool,Region du Pool,Région du Pool	CG	11	State	240999
 Plateaux	Departement des Plateaux,Département des Plateaux,Lefini,Nkeni,Plateaux,Region des Plateaux,Région des Plateaux	CG	08	State	0
 Région du Niari	Niari,Nyange-Louesse,Region du Niari,Région du Niari	CG	07	State	0
@@ -577,7 +577,7 @@ Kanton Appenzell Innerrhoden	Appenzell Dadens,Appenzell Inner Rhodes,Appenzell I
 Kanton Aargau	Aargau,Argovia,Argovie,Canton Argovia,Canton d'Argovie,Canton of Aargau,Chantun Argovia,Kanton Aargau,aleugau ju,아르가우 주	CH	AG	State	574171
 Alpes Poeninae	Alpes Peninos (provincia romana),Alpes Poeninae (roemische Provinz),Alpes Poeninae (römische Provinz),Alpes pennines (province romaine),Alpi Pennine (provincia romana),Pennine Alps (Roman province)	CH	VS	State	0
 Alpes Poeninae et Graiae	Alpes Atrectianae et Poeninae,Alpes Graiae et Poeninae,Alpes Peninos y Grayos (provincia romana),Alpes Poeninae und Graiae (roemische Provinz),Alpes Poeninae und Graiae (römische Provinz),Alpes Poeniniae et Atrectianae,Alpes pennine et Grecques,Alpes pennines et grees (province romaine),Alpes pennines et grées (province romaine),Alpi Pennine e Graie (provincia romana),Pennine and Graian Alps (Roman province)	CH	VS	State	0
-Lagunes	District des Lagunes,Lagjun,Lagunes,Lagunu regionas,Lagūnų regionas,Mkoa wa Lagunes,Region des Lagunes,Regione delle Lagune,Regiunea Lagunes,Rehgijon Lagjun,Région des Lagunes,lagwin ju,ragyunu zhou,xi hu qu,Лагюн,Рэгіён Лагюн,ラギューヌ州,潟湖區,라귄 주	CI	82	State	0
+Lagunes	District des Lagunes,Lagjun,Lagunes,Lagunu regionas,Lagūnų regionas,Mkoa wa Lagunes,Regione delle Lagune,Regiunea Lagunes,Rehgijon Lagjun,lagwin ju,ragyunu zhou,xi hu qu,Лагюн,Рэгіён Лагюн,ラギューヌ州,潟湖區,라귄 주	CI	82	State	0
 Région du Sud-Comoé	Region du Sud-Comoe,Région du Sud-Comoé,Sud-Comoe,Sud-Comoé	CI	89	State	0
 Agnéby	Agnebi,Agneby,Agnébi,Agnéby,Aniebi,Anjebis,Mkoa wa Agneby,Mkoa wa Agnéby,Region de l' Agneby,Regione di Agneby,Regione di Agnéby,Regiunea Agneby,Regiunea Agnéby,Rehgijon Agnebi,Région de l’ Agnéby,a nie bi qu,ageunebi ju,anyebi zhou,Агнеби,Аниеби,Рэгіён Агнебі,アニェビ州,阿涅比区,아그네비 주	CI	74	State	0
 Haut-Sassandra	Aukstutine Sasandra,Aukštutinė Sasandra,Haut-Sassandra,Mkoa wa Haut-Sassandra,O-Sasandra,O-Sassandra,Region du Haut-Sassandra,Regione dellAlto Sassandra,Regiunea Haut-Sassandra,Rehgijon O-Sasandra,Région du Haut-Sassandra,gaosassandora zhou,oteusasangdeula ju,shang sa sang de la qu,О-Сасандра,О-Сассандра,Рэгіён О-Сасандра,上萨桑德拉区,高サッサンドラ州,오트사상드라 주	CI	80	State	0
@@ -985,6 +985,24 @@ Lapin Lääni	Lapin Laani,Lapin Lääni,Lapland,Laponie,Lappi,Lappland,Lapplands
 Southern Finland Province	Etela-Suomen Laani,Etelae-Suomen Laeaeni,Etelä-Suomen Lääni,Finlande-Meridionale,Finlande-Méridionale,Sodra Finlands Lan,Sor-Finland,Southern Finland,Southern Finland Province,Södra Finlands Län,Sør-Finland,Zuid Finland	FI	13	State	2209677
 Eastern Finland Province	Aust-Finland,Eastern Finland,Finlande-Orientale,Ita-Suomen Laani,Itae-Suomen Laeaeni,Itä-Suomen Lääni,OEstra Finlands laen,Ost-Finland,Ostra Finlands Lan,Östra Finlands Län,Östra Finlands län,Øst-Finland	FI	14	State	0
 Province of Western Finland	Finlande-Occidentale,Laensi-Suomen Laeaeni,Lansi-Suomen Laani,Länsi-Suomen Lääni,Province of Western Finland,Vaestra Finland,Vaestra Finlands Laen,Vest-Finland,Västra Finland,Västra Finlands Län,Western Finland	FI	15	State	1889542
+Lappland	Lappi,Lappland	FI	19	State	182885
+Kainuu	Caiania,Kainu,Kainuu,Kainuu eanangoddi,Kainuun maakunta,Kainū,Kajanaland,Kajinu,Kajnu,Kajnuu,kai nu qu,kainu jiyeog,kainu xian,kaynw,Каину,Кайну,Кайнуу,Кајину,קאניו,كاينو,کائنو,کاینو,კაინუუ,カイヌー県,凱努區,카이누 지역	FI	18	State	84498
+Norra Österbotten	Davvi-Pohjanmaa eanangoddi,Eszak-Pohjanmaa,Ipar Ostrobotnia,Norda Ostrobotnio,Nordoesterbotten,Nordösterbotten,Norra OEsterbotten,Norra Österbotten,Northern Ostrobothnia,Northren Ostrobothnie,Ostrobothnia Utara,Ostrobotnia Polnocna,Ostrobotnia Północna,Ostrobotnia Setentrional,Ostrobotnia de Nord,Ostrobotnia del Norte,Ostrobotnia do Norte,Ostrobotnia settentrionale,Ostrobotnie du Nord,Ostrobótnia do Norte,Pivnichna Pogjanmaa,Pohja-Pohjanmaa,Pohjanmaa Hwoaie,Pohjois-Pohjanmaa,Pohjois-Pohjanmaan maakunta,Pokh'jojs Pokh'janma,Põhja-Pohjanmaa,Severna Ostrobotnija,Severnaja Ostrobotnija,Severni Pohjanmaa,Severní Pohjanmaa,Siaures Pohjanma,Voreia Ostrovothnia,awstrwbwtnyay shmaly,bei bo teng qu,beipofuyanma xian,bugpoheuyanma jiyeog,bwhyanma alshmalyt,Észak-Pohjanmaa,Šiaurės Pohjanma,Βόρεια Οστροβόθνια,Похьёйс Похьянма,Північна Погянмаа,Северна Остроботнија,Северная Остроботния,אוסטרובוטניה הצפונית,اتلا اوسٹروبوتھنیا,اوستروبوتنیای شمالی,بوهيانما الشمالية,ჩრდილოეთი ოსტრობოტნია,北ポフヤンマー県,北博滕區,북포흐얀마 지역	FI	17	State	384900
+Mellersta Österbotten	Central Ostrobothnia,Keski-Pohjanmaa,Mellersta OEsterbotten,Mellersta Österbotten,Ostrobotnie-Centrale	FI	16	State	70106
+Österbotten	Ostrobothnia,Ostrobothnie,Ostrobotnia,Ostrobotnia eskualdea,Ostrobotnie,Ostrobotnija,Ostrobotnio,Ostrobótnia,Pogjanmaa,Pohjanma,Pohjanmaa,Pohjanmaan maakunta,Pokh'janma,Regio dOstrobotnia,Regió dOstrobòtnia,awstrwbwtnya,bo teng qu,bwhyanma,pofuyanma xian,poheuyanma jiyeog,Остроботния,Остроботнија,Погянмаа,Похьянма,אוסטרובוטניה,اوستروبوتنیا,اوسٹروبوتھنیا,بوهيانما,ოსტრობოტნია,ポフヤンマー県,博滕區,포흐얀마 지역	FI	15	State	0
+Södra Österbotten	Ehtelja Pokh'janma,Etela-Pohjanmaa,Etelae-Pohjanmaa,Etelae-Pohjanmaan maakunta,Etelä-Pohjanmaa,Etelä-Pohjanmaan maakunta,Hego Ostrobotnia,Jizni Pohjanmaa,Jižní Pohjanmaa,Juzhna Ostrobotnija,Juzhnaja Ostrobotnija,Louna-Pohjanmaa,Lulli-Pohjanmaa eanangoddi,Lõuna-Pohjanmaa,Ostrobotnia Poludniowa,Ostrobotnia Południowa,Ostrobotnia de Sud,Ostrobotnia del Sud,Ostrobotnia del Sur,Ostrobotnia do Sul,Ostrobotnia do Sur,Ostrobotnia meridionale,Ostrobotnie du Sud,Ostrobòtnia del Sud,Ostrobótnia do Sul,Pietu Pohjanma,Pietų Pohjanma,Pivdenna Pogjanmaa,Soothren Ostrobothnie,Southern Ostrobothnia,Suda Ostrobotnio,Suedoesterbotten,Südösterbotten,awstrwbwtnyay jnwby,bwhyanma aljnwbyt,nampoheuyanma jiyeog,nan bo teng qu,nanpofuyanma xian,Јужна Остроботнија,Південна Погянмаа,Этеля Похьянма,Южная Остроботния,اوستروبوتنیای جنوبی,بوهيانما الجنوبية,تھلواں اوسٹروبوتھنیا,სამხრეთი ოსტრობოტნია,南ポフヤンマー県,南博滕區,남포흐얀마 지역	FI	14	State	192675
+Mellersta Finland	Central Finland,Finlande-Centrale,Finlandia Centrale,Keski-Suomi,Mellersta Finland,Midt-Finland	FI	13	State	0
+Pohjois-Karjala	Carelie du Nord,Carélie du Nord,Nord-Karelen,Norra Karelen,North Karelia,Pohjois-Karjala	FI	12	State	0
+Savo	Norra Savolax,Pohjois-Savo,Savolax,Savonie du Nord	FI	11	State	250294
+Southern Savonia	Etelae-Savo,Etelä-Savo,Savonie du Sud,Sodra Savolax,Southern Savonia,Södra Savolax	FI	10	State	0
+Etelä-Karjala	Carelie du Sud,Carélie du Sud,Etelae-Karjala,Etelä-Karjala,Sodra Karelen,Sor-Karelen,South Karelia,Sydkarelens Forbund,Sydkarelens Förbund,Södra Karelen,Sør-Karelen	FI	09	State	0
+Kymenlaakso	Kimenska Dolina,Kiumenlaksas,Kjumenlaakso,Kjumenlakso,Kymenlaakso,Kymenlaakson maakunta,Kymmenedalen,Vall de Kymi,Vallee de la Kymi,Vallée de la Kymi,kwimenlagso jiyeog,kwmnlaksw,kymnlaksw,kymynlaksw,kyumenrakuso xian,qu mi qu,Кименска Долина,Кюменлааксо,Кюменлаксо,كومنلاكسو,کیمنلاکسو,کیمینلاکسو,კიმენლააკსო,キュメンラークソ県,屈米區,퀴멘락소 지역	FI	08	State	184317
+Pirkanmaa	Birkaland,Birkaria,Pirkanma,Pirkanmaa,Pirkanmaan maakunta,Pirkanska zemla,byrknma,pi er ka qu,pileukanma jiyeog,pirukanma xian,prkanma,pyrkanma,Пирканма,Пирканмаа,Пирканска земља,Пірканмаа,بيركنما,پرکانما,پیرکانما,პირკანმაა,ピルカンマー県,皮爾卡區,피르칸마 지역	FI	06	State	462627
+Häme	Egentliga Tavastland,Kanta-Haeme,Kanta-Hame,Kanta-Häme,Tavastland	FI	05	State	167442
+Varsinais-Suomi	Egentliga Finland,Finland Proper,Finlanda Propriu-Zisa,Finlanda Propriu-Zisă,Finlande du Sud-Ouest,Finlande propre,Finlandia Propia,Finlandia Propria,Finlàndia Pròpia,Finlândia Própria,Finnia Propria,Finnlynn Chiart,Jatorrizko Finlandia,Paeris-Soome,Pietvakariu Suomija,Pietvakarių Suomija,Pivdenno-zakhidna Finljandija,Pura Finnlando,Päris-Soome,Uzha Finska,Varsinais-Suomen maakunta,Varsinais-Suopma,Varsinajs Suomi,Varsinajs-Suomi,Vlastni Finsko,Vlastní Finsko,farsynays swwmy,namseopinlandeu jiyeog,nan xisuomi xian,varsinais-suomi,xi nan fen lan qu,Варсинайс Суоми,Варсинайс-Суоми,Південно-західна Фінляндія,Ужа Финска,فارسينايس سوومي,فنلینڈ خاص,ვარსინაის-სუომი,南西スオミ県,西南芬蘭區,남서핀란드 지역	FI	02	State	0
+Uusimaa	Landskapet Nyland,Nilandia,Nova Zemla,Nyland,Nyland tartomany,Nyland tartomány,Nylandia,Usima,Uudenmaan maakunta,Uusimaa,Uusimaa maakond,awsyma,ushima xian,usima jiyeog,uusimaa,xin de qu,ywwsyma,Ūsima,Нова Земља,Усима,Уусимаа,Уусімаа,أوسيما,اوسیما,یووسیما,უუსიმაა,ウーシマー県,新地区,우시마 지역	FI	01	State	0
+Päijät-Häme	Paijanne-Tavastland,Päijänne-Tavastland	FI	07	State	199059
+Satakunta	Satagundia,Satakunda,Satakunnan maakunta,Satakunta,Satakunta tartomany,Satakunta tartomány,sa ka kun da qu,sataknta,satakunta jiyeog,satakunta xian,satakwnta,stakwnta,Сатакунта,ساتاکنتا,ساتاکونتا,ستاكونتا,სატაკუნტა,サタクンタ県,薩卡昆達區,사타쿤타 지역	FI	04	State	232687
 Western Division	Divisao do Oeste,Division Occidental,Division Oeste,Division occidentale,Divisione Occidentale,División Occidental,División Oeste,Divisão do Oeste,Dystrykt Zachodni,Khu vuc Tay,Khu vực Tây,Vaestra divisionen,Vakarinis Fidzio padalinys,Vakarinis Fidžio padalinys,Vest-Fiji,Västra divisionen,Western,Zapadnyj okrug,seobu jibang,xi bu da qu,Западный округ,西部大区,서부 지방	FJ	05	State	0
 Northern Division	Divisao do Norte,Division Norte,Division septentrionale,Divisione Nord,División Norte,Divisão do Norte,Dystrykt Polnocny,Dystrykt Północny,Khu vuc Bac,Khu vực Bắc,Nord-Fiji,Norra divisionen,Northern,Severnyj okrug,Siaurinis Fidzio padalinys,bei bu da qu,bugbu jibang,Šiaurinis Fidžio padalinys,Северный округ,北部大区,북부 지방	FJ	03	State	0
 Central Division	Central,Central'nyj okrug,Centrala divisionen,Centrinis Fidzio padalinys,Centrinis Fidžio padalinys,Divisao Central,Division Central,Division centrale,Divisione Centrale,División Central,Divisão Central,Diviziunea Centrala,Diviziunea Centrală,Dystrykt Centralny,Khu vuc Trung tam,Khu vực Trung tâm,Sentral-Fiji,jungbu jibang,zhong yang da qu,Центральный округ,中央大区,중부 지방	FJ	01	State	0
@@ -1377,7 +1395,7 @@ State of Jammu and Kashmīr	Cachemire,Jammu and Kashmir,Jammu and Kashmīr,Jammu
 State of Himāchal Pradesh	Chimatsal Prantes,Himacal Prades,Himacal Pradesas,Himacal-Pradeso,Himacala Pradesa,Himacalprades,Himachal Prades,Himachal Pradesh,Himacl Prdes,Himacsal Prades,Himaçhal Pradeş,Himaĉal-Pradeŝo,Himačal Pradeš,Himačal Pradešas,Himačl Prdeš,Himácsal Prades,Himáčalpradéš,Himāchal Pradesh,Himāčala Pradēša,Khimachal Pradesh,Khimachal-Pradehsh,Khimachal-Pradesh,State of Himachal Pradesh,State of Himāchal Pradesh,himacal prades,himacala pradesa,himacalapradesarajyam,himachalpeuladesi ju,hymachal pradsh,hymajl brdysh,imaccalap piratecam,rath him acal prathes,xi ma xie er bang,Χιμάτσαλ Πραντές,Химачал Прадеш,Химачал-Прадеш,Хімачал-Прадеш,Хімачал-Прадэш,Ҳимочал Прадеш,הימאצל פרדש,هيماجل برديش,هیماچال پرادش,ہماچل پردیش,ހިމާޗަލް ޕްރަދޭޝް,हिमाचल प्रदेश,हिमाचलप्रदेशराज्यम्,হিমাচল প্রদেশ,হিমাচল প্ৰদেশ,ਹਿਮਾਚਲ ਪ੍ਰਦੇਸ਼,હિમાચલ પ્રદેશ,ହିମାଚଳ ପ୍ରଦେଶ,இமாச்சலப் பிரதேசம்,హిమాచల్ ప్రదేశ్,ಹಿಮಾಚಲ ಪ್ರದೇಶ,ഹിമാചൽ പ്രദേശ്‌,හිමාචල් ප්‍රදේශ්,รัฐหิมาจัลประเทศ,ཧི་མ་ཅལ་མངའ་སྡེ།,ჰიმაჩალ-პრადეში,ヒマーチャル・プラデーシュ州,喜马偕尔邦,히마찰프라데시 주	IN	11	State	6394040
 State of Haryāna	Charyana,Erjan,Hariana,Harijana,Harijána,Hariyana,Harjana,Harjano,Harjāna,Haryana,Haryāna,Khar'jana,Kharajana,Kharjana,State of Haryana,State of Haryāna,ariyana,ha li ya na bang,haliana ju,hari'ana,hariana,hariyana,hariyana zhou,hariyanarajyam,haryana,rath hr yana,Ërjan,Χαρυάνα,Харајана,Харьяна,Харяна,Ҳарияна,הריאנה,هاريانا,هاریانا,ہریانہ,ހަރިޔާނާ,हरियाणा,हरियाणाराज्यम्,হরিয়াণা,হরিয়ানা,ਹਰਿਆਣਾ,હરિયાણા,ହରିୟାଣା,அரியானா,హర్యానా,ಹರಿಯಾಣ,ഹരിയാണ,รัฐหรยาณา,ཧ་རི་ཡཱ་ཎཱ།,ჰარიანა,ハリヤーナー州,哈里亚纳邦,하리아나 주	IN	10	State	25353081
 State of Gujarāt	An Ghuisearait,An Ghúisearáit,Gucerat,Gucharat,Gudzarat,Gudzarata,Gudzaratas,Gudzharat,Gudzsarat,Gudzsarát,Gudźarat,Gudžarat,Gudžaratas,Gudžarát,Gudžarāta,Guejerat,Gugaratio,Gujarat,Gujarate,Gujarāt,Gujrat,Guyarat,Guzarata,Guĝaratio,Güjerat,Nkoutzarat,State of Gujarat,State of Gujarāt,ghwjarat,gjrat,gu ji la te bang,gujalateu ju,gujarat,gujarata,gujaratarajyam,gujarati,gujarato zhou,gujuratu,gwjarat,jwjrat,kucarattu,rath khu chra t,Γκουτζαράτ,Гуджарат,Гуџарат,Гуҷарот,גוגאראט,גודזשאראט,جوجرات,غوجارات,گجرات,گوجارات,گۇجارات,ގުޖުރާތު,गुजरात,गुजरातराज्यम्,গুজরাত,ਗੁਜਰਾਤ,ગુજરાત,ଗୁଜରାଟ,குசராத்து,గుజరాత్,ಗುಜರಾತ್,ഗുജറാത്ത്‌,ගුජරාටය,รัฐคุชราต,གྷུ་ཇ་རཱཏ།,გუჯარათი,グジャラート州,古吉拉特邦,구자라트 주	IN	09	State	53957371
-Union Territory of Damān and Diu	Daman a Diu,Daman a Diú,Daman and Diu,Daman and Diu  Union Territory of Goa,Daman en Diu,Daman et Diu,Daman i Diu,Daman ja Diu,Daman og Diu,Daman und Diu,Daman y Diu,Damano kaj Diuo,Damao e Diu,Damán y Diu,Damão e Diu,Damān and Diu,Damān and Diu  Union Territory of Goa,Territoire de Daman et Diu,Union Territory of Daman and Diu,Union Territory of Damān and Diu,da man-di wu,daman dayyu,daman mariyu dayyu,daman mattu diyu,damana ane diva,damana aura diva,damani da diu,Даман и Диу,दमन और दीव,દમણ અને દીવ,డామన్ డయ్యు,డామన్ మరియు డయ్యు,ದಮನ್ ಮತ್ತು ದಿಯು,ദാമന്‍,დამანი და დიუ,ダマン・ディーウ連邦直轄地域,达曼-第乌	IN	32	State	0
+Union Territory of Damān and Diu	Daman a Diu,Daman a Diú,Daman and Diu,Daman en Diu,Daman et Diu,Daman i Diu,Daman ja Diu,Daman og Diu,Daman und Diu,Daman y Diu,Damano kaj Diuo,Damao e Diu,Damán y Diu,Damão e Diu,Damān and Diu,Territoire de Daman et Diu,Union Territory of Daman and Diu,Union Territory of Damān and Diu,da man-di wu,daman dayyu,daman mariyu dayyu,daman mattu diyu,damana ane diva,damana aura diva,damani da diu,Даман и Диу,दमन और दीव,દમણ અને દીવ,డామన్ డయ్యు,డామన్ మరియు డయ్యు,ದಮನ್ ಮತ್ತು ದಿಯು,ദാമന്‍,დამანი და დიუ,ダマン・ディーウ連邦直轄地域,达曼-第乌	IN	32	State	0
 Goa	Colonia Goa,Cólonia Goa,Daman and Diu  Union Territory of Goa,Damān and Diu  Union Territory of Goa,Distrito de Goa,Goa,Goa District,Goa osariik,Goao,Gua,Góa,Nkoa,Qoa,State of Goa,Union Territory of Goa,garaa,geava,ghwa,go'a,goa,goa ju,goa zhou,goraa,gova,govarajyam,goya,guo a bang,gwa,kova,rath kaw,Γκόα,Гоа,Гуа,גואה,غوا,گوا,ގޯވާ,गोआ,गोवा,गोवाराज्यम्,গোয়া,গোৱা,গৱা,ਗੋਆ,ગોઆ,ଗୋଆ,கோவா,గోవా,ಗೋವ,ഗോവ,รัฐกัว,གྷོའ།,გოა,ゴア州,果阿邦,고아 주	IN	33	State	1225000
 National Capital Territory of Delhi	Delhi,Dilli,NCT,National Capital Territory,National Capital Territory of Delhi,State of Delhi,Union Territory of Delhi,dili,dilli,دہلی,दिल्ली,ਦਿੱਲੀ	IN	07	State	15766943
 Union Territory of Dādra and Nagar Haveli	Dadara et Nagara Haveli,Dadra a Nagar Haveli,Dadra ampong Nagar Haveli,Dadra an Nagar Haveli,Dadra and Nagar Aveli,Dadra and Nagar Haveli,Dadra and Nagar Havili,Dadra ati Nagar Haveli,Dadra dan Nagar Haveli,Dadra e Nagar Haveli,Dadra e Nagar-Aveli,Dadra en Nagar Haveli,Dadra es Nagar Haveli,Dadra et Nagar Haveli,Dadra eta Nagar Haveli,Dadra i Nagar Haveli,Dadra i Nagar Khaveli,Dadra i Nagar-Khaveli,Dadra i Nagarhaweli,Dadra i Nagarkhaveli,Dadra ir Nagar Havelis,Dadra ja Nagar Haveli,Dadra kap Nagar Haveli,Dadra ngan Nagar Haveli,Dadra och Nagar Haveli,Dadra og Nagar Haveli,Dadra si Nagar Haveli,Dadra un Nagarhaveli,Dadra und Nagar Haveli,Dadra va Nagar Haveli,Dadra ve Nagar Haveli,Dadra và Nagar Haveli,Dadra y Nagar Haveli,Dadra àti Nagar Haveli,Dadra és Nagar Haveli,Dadra și Nagar Haveli,Dadro kaj Nagar-Havelio,Dadrá e Nagar-Aveli,Dádra a Nagar Havelí,Dádra a Nágar Havélí,Dādra and Nagar Haveli,Dādra un Nagarhaveli,Nagar Haveli,Ntantra kai Nankar Chaveli,Union Territory of Dadra and Nagar Haveli,Union Territory of Dādra and Nagar Haveli,da de la-na jia er ha wei li,dadara ane nagarahaveli,dadara ani nagara-haveli,dadara ani nagarahaveli,dadara ate nagara haveli,dadara aura nagara haveli,dadara baro nagara habheli,dadara nagarahaveli ca,dadara o nagara habheli,dadeula nagaleu habelli,dadra,dadra da nagar-haveli,dadra mattu nagar haveli,dadra nagaru haveli,dadra o nagara habeli,dadra w nagar hawly,dadra w ngr hwyly,tatra marrum nakar aveli,Ντάντρα και Ναγκάρ Χαβέλι,Дадра и Нагар Хавели,Дадра и Нагар-Хавели,Дадра і Нагар-Хавелі,Дадра і Нагархавелі,דאדרה ונאגר הבלי,دادرا تٔ نگر ہوےلی,دادرا و ناگار هاولی,دادرا و نگر حویلی,ދާދްރާ އާއި ނަގަރު ހަވޭލީ,दादरा अनि नगरहवेली,दादरा आणि नगर-हवेली,दादरा और नगर हवेली,दादरा नागरहवेली च,দাদরা ও নগর হাভেলি,দাদরা বারো নগর হাভেলী,ਦਾਦਰ ਅਤੇ ਨਗਰ ਹਵੇਲੀ,દાદરા અને નગરહવેલી,ଦାଦ୍ରା ଓ ନଗର ହବେଳୀ,தாத்ரா மற்றும் நகர் அவேலி,దాద్రా నగరు హవేలీ,ದಾದ್ರ ಮತ್ತು ನಗರ್ ಹವೆಲಿ,ദാദ്ര,ดาดราและนครหเวลี,დადრა და ნაგარ-ჰაველი,ダードラー及びナガル・ハヴェーリー連邦直轄領,达德拉-纳加尔哈维利,다드라 나가르 하벨리	IN	06	State	257514
@@ -1810,9 +1828,9 @@ Gbarpolu County	Gbarpolu,Gbarpolu County	LR	21	State	0
 River Gee County	River Gee,River Gee County	LR	22	State	0
 Thaba-Tseka	Daerah Thaba-Tseka,Distretto di Thaba-Tseka,District de Thaba-Tseka,Districtul Thaba-Tseka,Distrik Thaba-Tseka,Distrikt Thaba-Tseka,Distrito de Thaba-Tseka,Dystrykt Thaba-Tseka,Taba Cekos rajonas,Taba-Ceka,Thaba-Tseka,Thaba-Tseka District,ta ba-cai ka qu,tabacheka gu,Таба-Цека,مقاطعة ثابا-تسيكا,ターバ・ツェーカ県,塔巴-采卡區,타바체카 구	LS	19	State	158144
 Quthing	Cguting,Cgutingo rajonas,Daerah Quthing,Distretto di Quthing,District de Quthing,Districtul Quthing,Distrik Quthing,Distrikt Quthing,Distrito de Quthing,Dystrykt Quthing,Koutin'nk,Quthing,Quthing District,gu ting qu,kuting gu,kutingu xian,Κουτίνγκ,Цгутинг,Цгутінг,クティング県,古廷區,쿠팅 구	LS	18	State	228800
-Qacha’s Nek	Qacha's Nek,Qacha's Nek District,Qachaʼs Nek,Qacha’s Nek,Qacha’s Nek District,Quachasnek	LS	17	State	0
+Qacha’s Nek	Qacha's Nek,Qacha's Nek District,Qachaʼs Nek,Qacha’s Nek,Qacha’s Nek District,Quachasnek	LS	17	State	71876
 Mokhotlong	Daerah Mokhotlong,Distretto di Mokhotlong,District de Mokhotlong,Districtul Mokhotlong,Distrik Mokhotlong,Distrikt Mokhotlong,Distrito de Mokhotlong,Dystrykt Mokhotlong,Mokhotlong,Mokhotlong District,Mokotlong,Mokotlongo rajonas,mo huo te long qu,mokoteullong gu,mokotorongu xian,Мокотлонг,مقاطعة موخوتلنغ,モコトロング県,莫霍特隆區,모코틀롱 구	LS	16	State	149044
-Mohale’s Hoek District	Mohale's Hoek,Mohale's Hoek District,Mohales Hoek,Mohaleʼs Hoek,Mohale’s Hoek,Mohale’s Hoek District	LS	15	State	0
+Mohale’s Hoek District	Mohale's Hoek,Mohale's Hoek District,Mohales Hoek,Mohaleʼs Hoek,Mohale’s Hoek,Mohale’s Hoek District	LS	15	State	174924
 Maseru	Daerah Maseru,Distretto di Maseru,District de Maseru,Districtul Maseru,Distrik Maseru,Distrikt Maseru,Distrito de Maseru,Dystrykt Maseru,Maseru,Maseru District,Maseru rajonas,Maseru ringkond,Maserun alue,ma sai lu qu,maselu gu,maseru xian,Масеру,マセル県,馬塞盧區,마세루 구	LS	14	State	316155
 Mafeteng District	Mafeteng,Mafeteng District	LS	13	State	351601
 Leribe District	District de Leribe,Distrikt Leribe,Distrito de Leribe,Dystrykt Leribe,Leribe,Leribe District,Leriben alue,reribe xian,レリベ県	LS	12	State	414314
@@ -1878,7 +1896,7 @@ Skrundas Novads	Skrunda,Skrundas Novads	LV	C9	State	6057
 Brocēnu Novads	Broceni,Brocenu Novads,Brocenu novads,Brocēni,Brocēnu Novads,Brocēnu novads	LV	51	State	0
 Rojas Novads	Rojas,Rojas Novads	LV	B4	State	6271
 Kandavas Novads	Kandava,Kandavas Novads	LV	77	State	10057
-Auces Novads	Auces Novads,Auces novads	LV	44	State	8772
+Auces Novads	Auce,Auces novads	LV	44	State	8772
 Jaunpils Novads	Jaunpils,Jaunpils Novads	LV	73	State	2814
 Engures Novads	Engure,Engures Novads,Engures novads	LV	62	State	8058
 Tērvetes Novads	Tervete,Tervetes Novads,Tērvete,Tērvetes Novads	LV	D5	State	4173
@@ -1941,7 +1959,7 @@ Mazsalacas Novads	Mazsalaca,Mazsalacas Novads	LV	96	State	4042
 Burtnieku Novads	Burtnieki,Burtnieku Novads,Burtnieku novads	LV	52	State	8657
 Pārgaujas Novads	Pargaujas,Pargaujas Novads,Pārgaujas,Pārgaujas Novads	LV	A4	State	4502
 Kocēnu Novads	Koceni,Kocenu Novads,Kocēni,Kocēnu Novads,Valmieras Novads	LV	81	State	7031
-Amatas Novads	Amatas Novads,Amatas novads	LV	42	State	6369
+Amatas Novads	Amatas,Amatas novads	LV	42	State	6369
 Priekuļi Municipality	Priekuli,Priekulu Novads,Priekuļi,Priekuļu Novads	LV	A9	State	9550
 Raunas Novads	Raunas,Raunas Novads	LV	B1	State	4112
 Strenču Novads	Strenci,Strencu Novads,Strenči,Strenču Novads	LV	D3	State	4277
@@ -1950,7 +1968,7 @@ Smiltenes Novads	Smiltene,Smiltenes Novads	LV	D1	State	14376
 Jaunpiebalgas Novads	Jaunpiebalga,Jaunpiebalgas Novads	LV	72	State	0
 Ērgļu Novads	Ergli,Erglu Novads,Ērgļi,Ērgļu Novads	LV	63	State	3570
 Vecpiebalgas Novads	Vecpiebalga,Vecpiebalgas Novads	LV	E3	State	4776
-Apes Novads	Apes Novads,Apes novads	LV	43	State	4379
+Apes Novads	Apes,Apes novads	LV	43	State	4379
 Mērsraga Novads	Mersraga Novads,Mesraga,Mērsraga Novads	LV	F1	State	0
 Darnah	Baladiyat Darnah,Baladīyat Darnah,Darnah,Sha`biyat Darnah,Sha‘bīyat Darnah,drnt,درنة,شعبية درنة	LY	70	State	0
 Sha‘bīyat Banghāzī	Baladiyat Banghazi,Baladiyat Binghazi,Baladiyat Binghāzī,Baladīyat Banghāzī,Banghazi,Banghāzī,Sha`biyat Banghazi,Sha‘bīyat Banghāzī,bnghazy,بنغازي,شعبية بنغازي	LY	69	State	0
@@ -2360,13 +2378,13 @@ Mathi Dhekunu Sarahahdhu	Mathi Dhekunu,Mathi Dhekunu Sarahahdhu,Upper South,Uppe
 Mathi Uthuru Sarahahdhu	Mathi Uthuru,Mathi Uthuru Sarahahdhu,Upper North,Upper North Province	MV	50	State	41672
 Medhu Sarahahdhu	Central Province,Medhu,Medhu Sarahahdhu	MV	51	State	0
 Medhu Dhekunu Sarahahdhu	Medhu Dhekunu,Medhu Dhekunu Sarahahdhu,South Central,South Central Province	MV	52	State	20483
-Medhu Uthuru Sarahahdhu	Medhu Uthuru,Medhu Uthuru Sarahahdhu,North Central Province	MV	53	State	31202
+Medhu Uthuru Sarahahdhu	Medhu Uthuru,Medhu Uthuru Sarahahdhu,North Central,North Central Province	MV	53	State	31202
 Uthuru Sarahahdhu	North Province,Uthuru,Uthuru Sarahahdhu	MV	54	State	0
 Southern Region	Southern Province,Southern Region	MW	S	State	5345000
 Northern Region	Northern Province,Northern Region	MW	N	State	1389000
 Central Region	Central Province,Central Region	MW	C	State	4814000
 Estado de Yucatán	Estado de Yucatan,Estado de Yucatán,Iucata,Iucatania,Iucatã,Jukatan,Jukatanio,YUC,Yucatan,Yucatán,you ka tan zhou,yukatan zhou,ywkatan,یوکاتان,ユカタン州,尤卡坦州	MX	31	State	1761761
-Estado de Veracruz-Llave	Estado de Veracruz,Estado de Veracruz-Llave,VER,Veracruz,Veracruz-Llave	MX	30	State	7058898
+Estado de Veracruz-Llave	Estado Libre y Soberano de Veracruz de Ignacio de la Llave,Estado de Veracruz,Estado de Veracruz-Llave,VER,Veracruz,Veracruz de Ignacio de la Llave,Veracruz-Llave	MX	30	State	7058898
 Estado de Tlaxcala	Estado de Tlaxcala,Estat de Tlaxcala,Etat de Tlaxcala,TLA,Tlascala,Tlax,Tlaxcala,Tlaxcallan,Tlaxcallān,Tlaxcalteques,torasukaruteka,État de Tlaxcala,トラスカルテカ	MX	29	State	1044369
 Estado de Tamaulipas	Estado de Tamaulipas,TAM,Tamaulipas,Tamps,ta mao li pa si zhou,tamauripasu zhou,Тамаулипас,タマウリパス州,塔毛利帕斯州	MX	28	State	2976339
 Estado de Tabasco	Estado de Tabasco,TAB,Tabasco,ta ba si ke zhou,tabaskw,tabasuko zhou,تاباسكو,タバスコ州,塔巴斯科州	MX	27	State	2041286
@@ -2379,7 +2397,7 @@ Estado de Morelos	Estado de Morelos,MOR,Morelos,Morelosas,mo lei luo si zhou,mor
 Estado de México	Estado de Mexico,Estado de México,Estat de Mexic,Estat de Mèxic,MEX,Messico,Mexico,Mexikoko estatua,México,Stat Meksiko,mehiko zhou,mo xi ge zhou,メヒコ州,墨西哥州	MX	15	State	0
 Estado de Hidalgo	Estado de Hidalgo,Etat dHidalgo,HID,Hgo,Hidalgo,Idalgo,idarugo zhou,yi da er ge zhou,État dHidalgo,Идалго,イダルゴ州,伊達爾戈州	MX	13	State	2356133
 Estado de Guerrero	Estado de Guerrero,Estat de Guerrero,GRO,Guerrero,ge lei luo zhou,gelelo ju,gerero zhou,ゲレーロ州,格雷羅州,게레로 주	MX	12	State	3237579
-Distrito Federal	Ciudad de Mexico,Ciudad de México,DF,Distrito Federal,El DF,Mexico D.F.,The Federal District	MX	09	State	8851080
+Distrito Federal	Ciudad de Mexico,Ciudad de México,DF,Distrito Federal,El DF,Federal District,Mexico City,Mexico D.F.,The Federal	MX	09	State	8851080
 Estado de Chiapas	CHP,Ch'japas,Chiapas,Chis,Chjapas,Estado de Chiapas,chiapaseu ju,chiapasu zhou,qia pa si zhou,tshyabas,Чьяпас,Чяпас,تشياباس,チアパス州,恰帕斯州,치아파스 주	MX	05	State	4250246
 Estado de Campeche	CAM,Campeche,Campeche osariik,Camps,Estado de Campeche,Estat de Campeche,Etat de Campeche,Kampeche,kampeche ju,kan pei qie zhou,kanpeche zhou,État de Campeche,Кампече,カンペチェ州,坎佩切州,캄페체 주	MX	04	State	743869
 Estado de Zacatecas	Estado de Zacatecas,Estat de Zacatecas,Etat de Zacatecas,ZAC,Zacatecas,sa ka te ka si zhou,sakatekasu zhou,État de Zacatecas,サカテカス州,薩卡特卡斯州	MX	32	State	1363577
@@ -2469,7 +2487,7 @@ Benue State	Benue,Benue State	NG	26	State	5181642
 Bauchi State	Bauchi,Bauchi State	NG	46	State	4653066
 Anambra State	Anambara,Anambra,Anambra State,Udi State	NG	25	State	4721858
 Akwa Ibom State	Akwa Ibom,Akwa Ibom State	NG	21	State	4805451
-Federal Capital Territory	Abuja (F.C.T.),Abuja Capital Territory,Abuja Federal Capital Territory,Agbegbe Oluilu Ijoba Apapo Abuja,Agbègbè Olúìlú Ìjọba Àpapọ̀ Abùjá,FCT,Federal Baskent Boelgesi,Federal Başkent Bölgesi,Federal Capital Territory,Federal'naja stolichnaja territorija,Federalne Terytorium Stoleczne,Federalne Terytorium Stołeczne,Foederaalne pealinnaala,Föderaalne pealinnaala,Territoire de la capitale federale du Nigeria,Territoire de la capitale fédérale du Nigeria,Territorio da Capital Federal da Nigeria,Territorio da Capital Federal de Nixeria,Território da Capital Federal da Nigéria,Wilayah Ibu Kota Federal,lian bang shou dou de qu,yeonbang sudo jigu,Федеральная столичная территория,منطقة العاصمة الإتحادية لنيجيريا,連邦首都地区,연방 수도 지구	NG	11	State	1405201
+Federal Capital Territory	Abuja (F.C.T.),Abuja Capital Territory,Abuja Federal Capital Territory,Agbegbe Oluilu Ijoba Apapo Abuja,Agbègbè Olúìlú Ìjọba Àpapọ̀ Abùjá,FCT,Federal Baskent Boelgesi,Federal Başkent Bölgesi,Federal Capital,Federal'naja stolichnaja territorija,Federalne Terytorium Stoleczne,Federalne Terytorium Stołeczne,Foederaalne pealinnaala,Föderaalne pealinnaala,Territoire de la capitale federale du Nigeria,Territoire de la capitale fédérale du Nigeria,Territorio da Capital Federal da Nigeria,Territorio da Capital Federal de Nixeria,Território da Capital Federal da Nigéria,Wilayah Ibu Kota Federal,lian bang shou dou de qu,yeonbang sudo jigu,Федеральная столичная территория,منطقة العاصمة الإتحادية لنيجيريا,連邦首都地区,연방 수도 지구	NG	11	State	1405201
 Abia State	Abia,Abia State	NG	45	State	4222476
 Delta State	Delta,Delta State	NG	36	State	4170214
 Adamawa State	Adamawa,Adamawa State	NG	35	State	3737223
@@ -2760,7 +2778,7 @@ Muḩāfaz̧at Shamāl al Bāţinah	Al Batinah,Al Batinah North Governorate,Muha
 Provincia de Veraguas	Provincia de Veraguas,Veraguas	PA	10	State	0
 Guna Yala	Circunscripcion de San Blas,Circunscripción de San Blas,Guna Yala,Intendencia de San Blas,Kuna Yala,NBL,San Blas	PA	09	State	35131
 Provincia de Panamá	Panama,Panamá,Provincia de Panama,Provincia de Panamá	PA	08	State	0
-Provincia de Los Santos	Los Santos,Provincia de Los Santos	PA	07	State	0
+Provincia de Los Santos	Los Santos,Los Santos Province,Provincia de Los Santos	PA	07	State	0
 Provincia de Herrera	Herrera,Provincia de Herrera	PA	06	State	0
 Provincia del Darién	Darien,Darién,Provincia de Darien,Provincia de Darién,Provincia del Darien,Provincia del Darién	PA	05	State	0
 Provincia de Colón	Colon,Colón,Provincia de Colon,Provincia de Colón	PA	04	State	0
@@ -3138,7 +3156,7 @@ Respublika Sakha (Yakutiya)	Respublika Sakha (Jakutija),Respublika Sakha (Yakuti
 Primorskiy Kray	Krai De Primorsky,Maritime Krai,Maritime Territory,Primorje,Primorski Krai,Primorskij Kraj,Primorskij kraj,Primorskiy,Primorskiy Kray,Приморский Край,Приморский край	RU	59	State	2021901
 Khabarovskiy Kray	Chabarovsk,Khabarovsk Krai,Khabarovsk Kray,Khabarovskij Kraj,Khabarovskij kraj,Khabarovskiy Kray,Krai de Khabarovsk,Хабаровский Край,Хабаровский край	RU	30	State	1394490
 Irkutskaya Oblast’	Irkutsk,Irkutskaja Oblast',Irkutskaja oblast,Irkutskaja oblast',Irkutskaya Oblast',Irkutskaya Oblast’,Иркутская Область,Иркутская область	RU	20	State	0
-Yevreyskaya Avtonomnaya Oblast’	Birobidjan,Birobijan,Den jodiske autonome oblasten,Den jødiske autonome oblasten,Evrejska avtonomna oblast,Evrejskaja AO,Evrejskaja Avtonomnaja Oblast',Evrejskaja avtonomnaja oblast',Hebrea Autonomio,Hebrea Aŭtonomio,Jevrejska autonomna oblast,Jewish Autonomous Oblast,Jodiske Autonome Oblast,Joodse Autonome Oblast,Judiska autonoma laenet,Judiska autonoma länet,Juedische Autonome Oblast,Juudi autonoomne oblast,Juutalaisten autonominen alue,Jødiske Autonome Oblast,Jüdische Autonome Oblast,Oblast Autonomo Hebreo,Oblast Autonomo Judaico,Oblast Autônomo Judaico,Oblast Emren Yuzev,Oblast Otonom Yahudi,Oblast autonome juif,Oblast' autonoma ebraica,Provincia Autonoma dels Hebreus,Província Autònoma dels Hebreus,Regiunea Autonoma Evreiasca,Regiunea Autonomă Evreiască,Yevreiskaya Autonomous Oblast,Yevreiski Autonomous Oblast,Yevreyskaya AO,Yevreyskaya Autonomnaya Oblast',Yevreyskaya Autonomnaya Oblast’,Yevreyskaya Avtonomnaya Oblast',Yevreyskaya Avtonomnaya Oblast’,Zidovska autonomna oblast,Zidovska autonomni oblast,Zydowski Obwod Autonomiczny,astan khwdgrdan yhwdy,hmhwz hyhwdy hʼwtwnwmy,you tai zi zhi zhou,yudaein jachiju,yudaya zi zhi zhou,yydysʻ ʼwytʼnʼmʻ gʻgnt,Óblast Autónomo Hebreo,Żydowski Obwód Autonomiczny,Židovska autonomna oblast,Židovská autonomní oblast,Židovská autonómna oblasť,Јеврејска аутономна област,Еврейска автономна област,Еврейская АО,Еврейская Автономная Область,Еврейская автономная область,המחוז היהודי האוטונומי,יידישע אויטאנאמע געגנט,استان خودگردان یهودی,ユダヤ自治州,犹太自治州,유대인 자치주	RU	89	State	176558
+Yevreyskaya Avtonomnaya Oblast’	Birobidjan,Birobijan,Den jodiske autonome oblasten,Den jødiske autonome oblasten,Evrejska avtonomna oblast,Evrejskaja AO,Evrejskaja Avtonomnaja Oblast',Evrejskaja avtonomnaja oblast',Hebrea Autonomio,Hebrea Aŭtonomio,Jevrejska autonomna oblast,Jewish Autonomous,Jewish Autonomous Oblast,Jodiske Autonome Oblast,Joodse Autonome Oblast,Judiska autonoma laenet,Judiska autonoma länet,Juedische Autonome Oblast,Juudi autonoomne oblast,Juutalaisten autonominen alue,Jødiske Autonome Oblast,Jüdische Autonome Oblast,Oblast Autonomo Hebreo,Oblast Autonomo Judaico,Oblast Autônomo Judaico,Oblast Emren Yuzev,Oblast Otonom Yahudi,Oblast autonome juif,Oblast' autonoma ebraica,Provincia Autonoma dels Hebreus,Província Autònoma dels Hebreus,Regiunea Autonoma Evreiasca,Regiunea Autonomă Evreiască,Yevreiskaya Autonomous Oblast,Yevreiski Autonomous Oblast,Yevreyskaya AO,Yevreyskaya Autonomnaya Oblast',Yevreyskaya Autonomnaya Oblast’,Yevreyskaya Avtonomnaya Oblast',Yevreyskaya Avtonomnaya Oblast’,Zidovska autonomna oblast,Zidovska autonomni oblast,Zydowski Obwod Autonomiczny,astan khwdgrdan yhwdy,hmhwz hyhwdy hʼwtwnwmy,you tai zi zhi zhou,yudaein jachiju,yudaya zi zhi zhou,yydysʻ ʼwytʼnʼmʻ gʻgnt,Óblast Autónomo Hebreo,Żydowski Obwód Autonomiczny,Židovska autonomna oblast,Židovská autonomní oblast,Židovská autonómna oblasť,Јеврејска аутономна област,Еврейска автономна област,Еврейская АО,Еврейская Автономная Область,Еврейская автономная область,המחוז היהודי האוטונומי,יידישע אויטאנאמע געגנט,استان خودگردان یهودی,ユダヤ自治州,犹太自治州,유대인 자치주	RU	89	State	176558
 Amurskaya Oblast’	Amur,Amurskaja Oblast',Amurskaja oblast,Amurskaja oblast',Amurskaya Oblast',Amurskaya Oblast’,Амурская Oбласть,Амурская область	RU	05	State	0
 Respublika Buryatiya	Burjatien,Burjatija,Buryat-Mongol A.S.S.R.,Buryat-Mongol Republic,Buryat-Mongol'skaya ASSR,Buryat-Mongol'skaya Avtonomnaya Sovetskaya Sotsialisticheskaya Respublika,Buryat-Mongolian A.S.S.R.,Buryat-Mongol’skaya ASSR,Buryat-Mongol’skaya Avtonomnaya Sovetskaya Sotsialisticheskaya Respublika,Buryatiya,Buryatskaya ASSR,Buryatskaya Avtonomnaya Sovetskaya Sotsialisticheskaya Respublika,Respublika Burjatija,Respublika Buryatiya,Бурятия,Республика Бурятия	RU	11	State	963335
 Sakhalinskaya Oblast’	Sachalin,Sajalin,Sakhalin,Sakhalinskaja Oblast',Sakhalinskaja oblast',Sakhalinskaya Oblast',Sakhalinskaya Oblast’,Сахалин,Сахалинская Область,Сахалинская область	RU	64	State	0
@@ -3905,7 +3923,7 @@ Geita Region	Geita,Geita Region,Mkoa wa Geita	TZ	28	State	1739530
 Katavi Region	Katavi,Katavi Region,Mkoa wa Katavi	TZ	29	State	564604
 Njombe Region	Mkoa wa Njombe,Njombe,Njombe Region	TZ	30	State	702097
 Zhytomyrs’ka Oblast’	Zhitomir Oblast,Zhitomirs'ka Oblast',Zhitomirs'ka oblast',Zhitomirskaja oblast',Zhitomirskaya Oblast',Zhitomirskaya Oblast’,Zhytomyr,Zhytomyrs'ka Oblast',Zhytomyrs’ka Oblast’,Житомирская область,Житомирська Область,Житомирська область	UA	27	State	1328158
-Zaporiz’ka Oblast’	Zaporiz'ka Oblast',Zaporiz'ka oblast',Zaporiz’ka Oblast’,Zaporozh'ye Oblast,Zaporozhskaja oblast',Zaporozhskaya Oblast',Zaporozhskaya Oblast’,Zaporozh’ye Oblast,Запорожская область,Запорізька область	UA	26	State	0
+Zaporiz’ka Oblast’	Zaporiz'ka Oblast',Zaporiz'ka oblast',Zaporizhia,Zaporiz’ka Oblast’,Zaporozh'ye Oblast,Zaporozhskaja oblast',Zaporozhskaya Oblast',Zaporozhskaya Oblast’,Zaporozh’ye Oblast,Запорожская область,Запорізька область	UA	26	State	0
 Zakarpattia Oblast	Carpathian Ukraine Province,Karpatalja,Kárpátalja,Transcarpathian Oblast,Zakarpats'ka Oblast',Zakarpatskaja oblast',Zakarpatskaya Oblast',Zakarpatskaya Oblast’,Zakarpats’ka Oblast’,Zakarpattia,Закарпатская область,Закарпатська Область	UA	25	State	1241887
 Volyns’ka Oblast’	Volins'ka Oblast',Volyn,Volyns'ka Oblast',Volynskaja oblast',Volynskaya Oblast',Volynskaya Oblast’,Volyns’ka Oblast’,Волинська Область,Волынская область	UA	24	State	1036891
 Vinnyts’ka Oblast’	Vinnic'ka Oblast',Vinnickaja oblast',Vinnitsa Oblast,Vinnitskaya Oblast',Vinnitskaya Oblast’,Vinnyts'ka,Vinnyts'ka Oblast',Vinnyts’ka Oblast’,Винницкая область,Вінницька Область	UA	23	State	0
@@ -4248,5 +4266,5 @@ Mashonaland West Province	Mashonaland West,Mashonaland West Province	ZW	05	State
 Mashonaland East Province	Mashonaland East,Mashonaland East Province	ZW	04	State	1167065
 Mashonaland Central Province	Mashonaland Central,Mashonaland Central Province	ZW	03	State	1054077
 Manicaland Province	Manicaland,Manicaland Province	ZW	01	State	1590136
-Matebeleland South	Bulawayo,Bulawayo Province	ZW	09	State	0
+Bulawayo Province	Bulawayo,Bulawayo Province	ZW	09	State	650000
 Harare Province	Harare,Harare Province	ZW	10	State	1606000
