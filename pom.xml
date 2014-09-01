@@ -3,9 +3,33 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>con.taykey</groupId>
 	<artifactId>location-parser</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.9.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
 	<name>location parser</name>
-	<description>a tool to parse text to get the location in it</description>
+	<description>Tool to parse text to get the location in it</description>
+	<url>https://github.com/taykey/twitter-location-parser</url>
+
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<url>https://github.com/taykey/twitter-location-parser</url>
+		<connection>https://github.com/taykey/twitter-location-parser</connection>
+	</scm>
+
+	<developers>
+		<developer>
+			<id>udybrill</id>
+			<name>udy brill</name>
+			<email>udy@taykey.com</email>
+		</developer>
+	</developers>
 	
 	<dependencies>
 		<dependency>
@@ -44,24 +68,5 @@
 				<version>2.9</version>
 			</plugin>
 		</plugins>
-
-
 	</build>
-
-	<repositories>
-
-	</repositories>
-	<pluginRepositories>
-		<pluginRepository>
-			<releases>
-				<updatePolicy>never</updatePolicy>
-			</releases>
-			<snapshots>
-				<enabled>false</enabled>
-			</snapshots>
-			<id>central</id>
-			<name>Central Repository</name>
-			<url>http://repo.maven.apache.org/maven2</url>
-		</pluginRepository>
-	</pluginRepositories>
 </project>
