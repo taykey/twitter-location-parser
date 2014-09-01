@@ -11,8 +11,8 @@ public class TestPopulateDb {
     public void loadCitiesTest() {
 	MemLocationDao memLocationDao = new MemLocationDao();
 	DefaultPupulateDB pupulateDB = new DefaultPupulateDB(memLocationDao);
-	pupulateDB.loadLocations("data/countries_v3.csv");
-	pupulateDB.loadLocations("data/states_v3.csv");
-	pupulateDB.loadLocations("data/cities_v3.csv");
+	pupulateDB.loadLocations("data/countries.tsv");
+	pupulateDB.loadLocations("data/states.tsv");
+	pupulateDB.loadLocations("data/cities.tsv");
     }
 }
