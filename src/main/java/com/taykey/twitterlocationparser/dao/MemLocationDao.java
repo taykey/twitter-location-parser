@@ -1,12 +1,12 @@
-package com.taykey.locationparser.dao;
+package com.taykey.twitterlocationparser.dao;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.taykey.locationparser.dto.Location;
-import com.taykey.locationparser.dto.LocationType;
+import com.taykey.twitterlocationparser.dto.Location;
+import com.taykey.twitterlocationparser.dto.LocationType;
 
 public class MemLocationDao implements LocationDao {
 

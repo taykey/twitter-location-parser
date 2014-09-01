@@ -1,4 +1,4 @@
-package com.taykey.locationparser.common;
+package com.taykey.twitterlocationparser.common;
 
 import java.io.BufferedReader;
 import java.io.FileReader;

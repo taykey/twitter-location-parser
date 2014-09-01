@@ -1,13 +1,15 @@
-package com.taykey.locationparser;
+package com.taykey.twitterlocationparser;
 
 import java.util.ArrayList;
 import java.util.List;
 
 import org.junit.Test;
 
-import com.taykey.locationparser.common.IterableFile;
-import com.taykey.locationparser.dao.MemLocationDao;
-import com.taykey.locationparser.dto.Location;
+import com.taykey.twitterlocationparser.DefaultLocationParser;
+import com.taykey.twitterlocationparser.LocationParser;
+import com.taykey.twitterlocationparser.common.IterableFile;
+import com.taykey.twitterlocationparser.dao.MemLocationDao;
+import com.taykey.twitterlocationparser.dto.Location;
 
 public class TestLocationParser {
 

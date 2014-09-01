@@ -1,4 +1,4 @@
-package com.taykey.locationparser.dto;
+package com.taykey.twitterlocationparser.dto;
 
 public enum LocationType {
 

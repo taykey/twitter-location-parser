@@ -1,8 +1,8 @@
-package com.taykey.locationparser.dao;
+package com.taykey.twitterlocationparser.dao;
 
 import java.util.List;
 
-import com.taykey.locationparser.dto.Location;
+import com.taykey.twitterlocationparser.dto.Location;
 
 public interface LocationDao {
 

@@ -1,4 +1,4 @@
-package com.taykey.locationparser;
+package com.taykey.twitterlocationparser;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -10,11 +10,11 @@ import java.util.Set;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import com.taykey.locationparser.dao.LocationDao;
-import com.taykey.locationparser.dto.Location;
-import com.taykey.locationparser.dto.LocationType;
-import com.taykey.locationparser.populatedb.DefaultPupulateDB;
-import com.taykey.locationparser.populatedb.PopulateDB;
+import com.taykey.twitterlocationparser.dao.LocationDao;
+import com.taykey.twitterlocationparser.dto.Location;
+import com.taykey.twitterlocationparser.dto.LocationType;
+import com.taykey.twitterlocationparser.populatedb.DefaultPupulateDB;
+import com.taykey.twitterlocationparser.populatedb.PopulateDB;
 
 public class DefaultLocationParser implements LocationParser {
 

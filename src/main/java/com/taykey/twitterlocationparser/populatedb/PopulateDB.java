@@ -1,4 +1,4 @@
-package com.taykey.locationparser.populatedb;
+package com.taykey.twitterlocationparser.populatedb;
 
 public interface PopulateDB {
     

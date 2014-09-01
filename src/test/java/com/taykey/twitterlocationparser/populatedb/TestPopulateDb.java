@@ -1,8 +1,9 @@
-package com.taykey.locationparser.populatedb;
+package com.taykey.twitterlocationparser.populatedb;
 
 import org.junit.Test;
 
-import com.taykey.locationparser.dao.MemLocationDao;
+import com.taykey.twitterlocationparser.dao.MemLocationDao;
+import com.taykey.twitterlocationparser.populatedb.DefaultPupulateDB;
 
 public class TestPopulateDb {
 
