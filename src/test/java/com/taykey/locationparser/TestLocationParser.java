@@ -7,6 +7,7 @@ import org.junit.Test;
 
 import com.taykey.locationparser.common.IterableFile;
 import com.taykey.locationparser.dao.MemLocationDao;
+import com.taykey.locationparser.dto.Location;
 
 public class TestLocationParser {
 
@@ -24,8 +25,8 @@ public class TestLocationParser {
 	}
 	long time = System.currentTimeMillis();
 	for (String string : strings) {
-	    String parseText = locationParser.parseText(string);
-	    c = parseText == null ? c : c + 1;
+	    Location location = locationParser.parseText(string);
+	    c = location == null ? c : c + 1;
 	  //  System.out.println(parseText + "\t\t\t\t" + string);
 	}
 	time = System.currentTimeMillis() - time;
@@ -40,10 +41,10 @@ public class TestLocationParser {
     public void parseSingleTextTest() {
 	long time = System.currentTimeMillis();
 	String string = "Bahía Blanca";
-	String parseText = locationParser.parseText(string);
+	Location location = locationParser.parseText(string);
 	time = System.currentTimeMillis() - time;
 	System.out.println();
-	System.out.println("took: " + time + ".\t" + parseText + "\t\t\t\t"
+	System.out.println("took: " + time + ".\t" + location + "\t\t\t\t"
 		+ string);
 
     }

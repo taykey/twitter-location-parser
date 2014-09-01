@@ -18,8 +18,9 @@ import com.taykey.locationparser.populatedb.PopulateDB;
 
 public class DefaultLocationParser implements LocationParser {
 
-    private static Logger log = LoggerFactory.getLogger(DefaultLocationParser.class);
-    
+    private static Logger log = LoggerFactory
+	    .getLogger(DefaultLocationParser.class);
+
     private LocationDao locationDao;
 
     public DefaultLocationParser(LocationDao locationDao) {
@@ -31,7 +32,7 @@ public class DefaultLocationParser implements LocationParser {
     }
 
     @Override
-    public String parseText(String text) {
+    public Location parseText(String text) {
 	List<String> words = ngrams(text, 3);
 	Map<LocationType, Set<Location>> candidates = new HashMap<LocationType, Set<Location>>();
 	Set<String> wordsWithLocation = new HashSet<String>();
@@ -59,94 +60,46 @@ public class DefaultLocationParser implements LocationParser {
 
     }
 
-    private String getLocationFromCandidates(String text,
+    private Location getLocationFromCandidates(String text,
 	    Map<LocationType, Set<Location>> candidates) {
-	if (candidates.get(LocationType.City) != null && candidates.get(LocationType.City).size() == 1) {
+	Set<Location> cityCandidates = candidates.get(LocationType.City);
+	if (cityCandidates != null && cityCandidates.size() == 1) {
 	    // in this point we are sure about which city we have. we need to
 	    // get the right country.
-	    Location city = new ArrayList<Location>(
-		    candidates.get(LocationType.City)).get(0);
-	    String stateCode = city.getStateCode();
-	    Location state = locationDao.getStateByCode(stateCode);
-	    if (stateCode != null) {
-		stateCode = state.getName();
-	    } else {
-		log.debug("found city with no state. text: {}. city: {}", text, city);
-	    }
-
-	    String countryCode = city.getCountryCode();
-	    Location country = locationDao.getCountryByCode(countryCode);
-	    if (country != null) {
-		countryCode = country.getName();
-	    } else {
-		log.debug("found city with no country. text: {}. city: {}", text, city);
-	    }
-
-	    return city.getName() + "," + stateCode + "," + countryCode;
+	    return cityCandidates.iterator().next();
 	}
 
-	if (candidates.get(LocationType.Country) != null && candidates.get(LocationType.Country).size() == 1) {
+	Set<Location> countryCandidates = candidates.get(LocationType.Country);
+	if (countryCandidates != null && countryCandidates.size() == 1) {
 	    // in this point we are sure about which country we have. we need to
-	    // check if there is also a
-	    // city.
-	    Location country = new ArrayList<Location>(
-		    candidates.get(LocationType.Country)).get(0);
-	    return country.getName();
+	    // check if there is also a city
+	    return countryCandidates.iterator().next();
 	}
 
-	if (candidates.get(LocationType.State) != null && candidates.get(LocationType.State).size() == 1) {
-	    // in this point we are sure about which city we have. we need to
-	    // get the right country.
-	    Location state = new ArrayList<Location>(
-		    candidates.get(LocationType.State)).get(0);
-	    String countryStr = state.getCountryCode();
-	    Location country = locationDao.getCountryByCode(countryStr);
-	    if (country != null) {
-		countryStr = country.getName();
-	    } else {
-		log.debug("found state with no country. text: {}. state: {}", text, state);
-	    }
-
-	    return state.getName() + "," + countryStr;
-
+	Set<Location> stateCandidates = candidates.get(LocationType.State);
+	if (stateCandidates != null && stateCandidates.size() == 1) {
+	    return stateCandidates.iterator().next();
 	}
 
-	if (candidates.get(LocationType.City) != null && candidates.get(LocationType.City).size() > 1) {
-	    // in this point we know we have more then 1 city. with no country
-	    // information.
-	    // if there is only 1 major city. we will choose it.
+	if (cityCandidates != null && cityCandidates.size() > 1) {
+	    // in this point we know we have more then 1 city.
+	    // we can choose the right city if there is a state or city info
+	    // if there isn't we will choose the major one if there is a big
+	    // diff.
 	    Location max = null;
 	    int maxPopulation = 0;
 	    int secondMaxPopulation = 0;
-	    for (Location location : candidates.get(LocationType.City)) {
+	    for (Location location : cityCandidates) {
 		int population = location.getPopulation();
 		if (population > maxPopulation) {
 		    secondMaxPopulation = maxPopulation;
 		    maxPopulation = population;
 		    max = location;
 		}
-
 	    }
 	    if (maxPopulation > secondMaxPopulation * 10) {
-		String stateCode = max.getStateCode();
-		Location state = locationDao.getStateByCode(stateCode);
-		if (stateCode != null) {
-		    stateCode = state.getName();
-		} else {
-		    log.debug("found city with no state. text: {}. city: {}", text, max);
-		}
-
-		String countryCode = max.getCountryCode();
-		Location country = locationDao.getCountryByCode(countryCode);
-		if (country != null) {
-		    countryCode = country.getName();
-		} else {
-		    log.debug("found city with no country. text: {}. city: {}", text, max);
-		}
-
-		return max.getName() + "," + stateCode + "," + countryCode;
+		return max;
 	    }
-
 	}
 
 	return null;
@@ -155,15 +108,14 @@ public class DefaultLocationParser implements LocationParser {
     private boolean isContained(Set<String> wordsWithLocation, String word) {
 	boolean contained = false;
 	for (String prevWord : wordsWithLocation) {
-	if (prevWord.contains(word)) {
-	    contained = true;
-	    break;
-	}
+	    if (prevWord.contains(word)) {
+		contained = true;
+		break;
+	    }
 	}
 	return contained;
     }
 
-    
     private List<String> ngrams(String text, int n) {
 	List<String> ngrams = new ArrayList<String>();
 	String[] twords = text.split("\\P{L}", 0);

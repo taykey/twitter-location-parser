@@ -1,6 +1,8 @@
 package com.taykey.locationparser;
 
+import com.taykey.locationparser.dto.Location;
+
 public interface LocationParser {
 
-    String parseText(String text);
+    Location parseText(String text);
 }
