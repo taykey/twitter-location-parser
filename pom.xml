@@ -30,7 +30,7 @@
 			<email>udy@taykey.com</email>
 		</developer>
 	</developers>
-	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.slf4j</groupId>

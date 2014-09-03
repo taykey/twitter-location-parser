@@ -11,9 +11,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.taykey.twitterlocationparser.dao.LocationDao;
+import com.taykey.twitterlocationparser.dao.MemLocationDao;
 import com.taykey.twitterlocationparser.dto.Location;
 import com.taykey.twitterlocationparser.dto.LocationType;
-import com.taykey.twitterlocationparser.populatedb.DefaultPupulateDB;
+import com.taykey.twitterlocationparser.populatedb.DefaultPopulateDB;
 import com.taykey.twitterlocationparser.populatedb.PopulateDB;
 
 public class DefaultLocationParser implements LocationParser {
@@ -23,16 +24,23 @@ public class DefaultLocationParser implements LocationParser {
 
     private LocationDao locationDao;
 
+    private PopulateDB populateDB;
+
+    public DefaultLocationParser() {
+	locationDao = new MemLocationDao();
+	PopulateDB populateDB = new DefaultPopulateDB(locationDao);
+	populateDB.loadLocations();
+    }
+
     public DefaultLocationParser(LocationDao locationDao) {
-	this.locationDao = locationDao;
-	PopulateDB populateDB = new DefaultPupulateDB(locationDao);
-	populateDB.loadLocations("data/countries.tsv");
-	populateDB.loadLocations("data/states.tsv");
-	populateDB.loadLocations("data/cities.tsv");
+	this.setLocationDao(locationDao);
     }
 
     @Override
     public Location parseText(String text) {
+	if (text == null || text.isEmpty()) {
+	    return null;
+	}
 	List<String> words = ngrams(text, 3);
 	Map<LocationType, Set<Location>> candidates = new HashMap<LocationType, Set<Location>>();
 	Set<String> wordsWithLocation = new HashSet<String>();
@@ -56,49 +64,67 @@ public class DefaultLocationParser implements LocationParser {
 	    }
 	}
 
-	return getLocationFromCandidates(text, candidates);
-
+	Location location = getLocationFromCandidates(candidates);
+	log.trace("text: {}\t\t\tlocation: {}", text, location);
+	return location;
     }
 
-    private Location getLocationFromCandidates(String text,
+    private Location getLocationFromCandidates(
 	    Map<LocationType, Set<Location>> candidates) {
+
 	Set<Location> cityCandidates = candidates.get(LocationType.City);
-	if (cityCandidates != null && cityCandidates.size() == 1) {
-	    // in this point we are sure about which city we have. we need to
-	    // get the right country.
-	    return cityCandidates.iterator().next();
-	}
-
-	Set<Location> countryCandidates = candidates.get(LocationType.Country);
-	if (countryCandidates != null && countryCandidates.size() == 1) {
-	    // in this point we are sure about which country we have. we need to
-	    // check if there is also a city
-	    return countryCandidates.iterator().next();
-	}
-
 	Set<Location> stateCandidates = candidates.get(LocationType.State);
-	if (stateCandidates != null && stateCandidates.size() == 1) {
-	    return stateCandidates.iterator().next();
-	}
+	Set<Location> countryCandidates = candidates.get(LocationType.Country);
 
-	if (cityCandidates != null && cityCandidates.size() > 1) {
-	    // in this point we know we have more then 1 city.
-	    // we can choose the right city if there is a state or city info
-	    // if there isn't we will choose the major one if there is a big
-	    // diff.
-	    Location max = null;
-	    int maxPopulation = 0;
-	    int secondMaxPopulation = 0;
-	    for (Location location : cityCandidates) {
-		int population = location.getPopulation();
-		if (population > maxPopulation) {
-		    secondMaxPopulation = maxPopulation;
-		    maxPopulation = population;
-		    max = location;
+	if (cityCandidates != null) {
+	    // in this point we are sure about which city we have.
+	    // we can check if we have states or countries and cross them to
+	    // increase confidence.
+	    if (cityCandidates.size() == 1
+		    && (stateCandidates == null || stateCandidates.size() <= 1)
+		    && (countryCandidates == null || countryCandidates.size() <= 1)) {
+		return cityCandidates.iterator().next();
+	    }
+
+	    if (cityCandidates.size() > 1) {
+		// in this point we know we have more then 1 city.
+		// we can choose the right city if there is a state or city info
+		// if there isn't we will choose the major one if there is a big
+		// diff.
+		Location max = null;
+		int maxPopulation = 0;
+		int secondMaxPopulation = 0;
+		for (Location location : cityCandidates) {
+		    int population = location.getPopulation();
+		    if (population > maxPopulation) {
+			secondMaxPopulation = maxPopulation;
+			maxPopulation = population;
+			max = location;
+		    }
+		}
+		if (maxPopulation > secondMaxPopulation * 10) {
+		    return max;
 		}
 	    }
-	    if (maxPopulation > secondMaxPopulation * 10) {
-		return max;
+	}
+
+	if (stateCandidates != null && stateCandidates.size() == 1) {
+	    // in this point we are sure about which state we have.
+	    // we can check if we have cities or countries and cross them to
+	    // increase confidence.
+	    if ((countryCandidates == null || countryCandidates.size() <= 1)
+		    && (cityCandidates == null || cityCandidates.size() <= 1)) {
+		return stateCandidates.iterator().next();
+	    }
+	}
+
+	if (countryCandidates != null && countryCandidates.size() == 1) {
+	    // in this point we are sure about which country we have.
+	    // we can check if we have cities or states and cross them to
+	    // increase confidence.
+	    if ((stateCandidates == null || stateCandidates.size() <= 1)
+		    && (cityCandidates == null || cityCandidates.size() <= 1)) {
+		return countryCandidates.iterator().next();
 	    }
 	}
 
@@ -145,6 +171,22 @@ public class DefaultLocationParser implements LocationParser {
 	for (int i = start; i < end; i++)
 	    sb.append((i > start ? " " : "") + words[i]);
 	return sb.toString();
+    }
+
+    public LocationDao getLocationDao() {
+	return locationDao;
+    }
+
+    public void setLocationDao(LocationDao locationDao) {
+	this.locationDao = locationDao;
+    }
+
+    public PopulateDB getPopulateDB() {
+	return populateDB;
+    }
+
+    public void setPopulateDB(PopulateDB populateDB) {
+	this.populateDB = populateDB;
     }
 
 }
