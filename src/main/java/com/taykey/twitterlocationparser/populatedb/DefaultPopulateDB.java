@@ -14,58 +14,58 @@ import com.taykey.twitterlocationparser.dto.LocationType;
 public class DefaultPopulateDB implements PopulateDB {
 
     private static Logger log = LoggerFactory
-	    .getLogger(DefaultPopulateDB.class);
+            .getLogger(DefaultPopulateDB.class);
 
     private LocationDao locationDao;
 
     private List<String> dataFiles;
 
     public DefaultPopulateDB(LocationDao locationDao) {
-	this.locationDao = locationDao;
-	this.dataFiles = Arrays.asList("data/countries.tsv", "data/states.tsv",
-		"data/cities.tsv");
+        this.locationDao = locationDao;
+        this.dataFiles = Arrays.asList("data/countries.tsv", "data/states.tsv",
+                "data/cities.tsv");
     }
 
     public DefaultPopulateDB(LocationDao locationDao, List<String> dataFiles) {
-	this.locationDao = locationDao;
-	this.dataFiles = dataFiles;
+        this.locationDao = locationDao;
+        this.dataFiles = dataFiles;
     }
 
     public void loadLocations(String dataFile) {
-	log.debug("start loaading file: {}", dataFile);
-	int counter = 0;
-	IterableFile iterator = new IterableFile(dataFile);
-	for (String text : iterator) {
-	    counter++;
-	    String[] fields = text.split("\t");
-	    locationDao.addLocation(new Location(fields[0], fields[1],
-		    fields[2], fields[3], LocationType.valueOf(fields[4]),
-		    Integer.parseInt(fields[5])));
-	}
-	log.debug("done loaading file: {}. added {} new records", dataFile,
-		counter);
+        log.debug("start loaading file: {}", dataFile);
+        int counter = 0;
+        IterableFile iterator = new IterableFile(dataFile);
+        for (String text : iterator) {
+            counter++;
+            String[] fields = text.split("\t");
+            locationDao.addLocation(new Location(fields[0], fields[1],
+                    fields[2], fields[3], LocationType.valueOf(fields[4]),
+                    Integer.parseInt(fields[5])));
+        }
+        log.debug("done loaading file: {}. added {} new records", dataFile,
+                counter);
     }
 
     @Override
     public void loadLocations() {
-	for (String dataFile : dataFiles) {
-	    loadLocations(dataFile);
-	}
+        for (String dataFile : dataFiles) {
+            loadLocations(dataFile);
+        }
     }
 
     public LocationDao getLocationDao() {
-	return this.locationDao;
+        return this.locationDao;
     }
 
     public void setLocationDao(LocationDao locationDao) {
-	this.locationDao = locationDao;
+        this.locationDao = locationDao;
     }
 
     public List<String> getDataFiles() {
-	return this.dataFiles;
+        return this.dataFiles;
     }
 
     public void setDataFiles(List<String> dataFiles) {
-	this.dataFiles = dataFiles;
+        this.dataFiles = dataFiles;
     }
 }

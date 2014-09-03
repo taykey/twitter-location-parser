@@ -9,8 +9,8 @@ public class TestPopulateDb {
 
     @Test
     public void loadCitiesTest() {
-	MemLocationDao memLocationDao = new MemLocationDao();
-	PopulateDB pupulateDB = new DefaultPopulateDB(memLocationDao);
-	pupulateDB.loadLocations();
+        MemLocationDao memLocationDao = new MemLocationDao();
+        PopulateDB pupulateDB = new DefaultPopulateDB(memLocationDao);
+        pupulateDB.loadLocations();
     }
 }

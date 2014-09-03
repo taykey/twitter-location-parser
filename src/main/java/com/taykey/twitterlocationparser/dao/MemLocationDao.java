@@ -21,43 +21,43 @@ public class MemLocationDao implements LocationDao {
 
     @Override
     public void addLocation(Location location) {
-	String alternateNames = location.getAlternateNames();
-	alternateNames += "," + location.getName();
-	String[] names = alternateNames.split(",");
-	for (String name : names) {
-	    if (name.length() <= 2) {
-		continue;
-	    }
+        String alternateNames = location.getAlternateNames();
+        alternateNames += "," + location.getName();
+        String[] names = alternateNames.split(",");
+        for (String name : names) {
+            if (name.length() <= 2) {
+                continue;
+            }
 
-	    List<Location> list = locations.get(name.toLowerCase());
-	    if (list == null) {
-		list = new ArrayList<Location>();
-		locations.put(name.toLowerCase(), list);
-	    }
-	    list.add(location);
-	}
+            List<Location> list = locations.get(name.toLowerCase());
+            if (list == null) {
+                list = new ArrayList<Location>();
+                locations.put(name.toLowerCase(), list);
+            }
+            list.add(location);
+        }
 
-	if (LocationType.Country.equals(location.getType())) {
-	    countries.put(location.getCountryCode(), location);
-	}
+        if (LocationType.Country.equals(location.getType())) {
+            countries.put(location.getCountryCode(), location);
+        }
 
-	if (LocationType.State.equals(location.getType())) {
-	    states.put(location.getStateCode(), location);
-	}
+        if (LocationType.State.equals(location.getType())) {
+            states.put(location.getStateCode(), location);
+        }
     }
 
     @Override
     public List<Location> getLocation(String location) {
-	return locations.get(location.toLowerCase());
+        return locations.get(location.toLowerCase());
     }
 
     @Override
     public Location getCountryByCode(String countryCode) {
-	return countries.get(countryCode);
+        return countries.get(countryCode);
     }
 
     @Override
     public Location getStateByCode(String stateCode) {
-	return states.get(stateCode);
+        return states.get(stateCode);
     }
 }
