@@ -81,8 +81,8 @@ public class DefaultLocationParser implements LocationParser {
             // we can check if we have states or countries and cross them to
             // increase confidence.
             if (cityCandidates.size() == 1
-                    && (stateCandidates == null || stateCandidates.size() <= 1)
-                    && (countryCandidates == null || countryCandidates.size() <= 1)) {
+                    && (stateCandidates == null || stateCandidates.isEmpty())
+                    && (countryCandidates == null || countryCandidates.isEmpty())) {
                 return cityCandidates.iterator().next();
             }
 
@@ -112,8 +112,8 @@ public class DefaultLocationParser implements LocationParser {
             // in this point we are sure about which state we have.
             // we can check if we have cities or countries and cross them to
             // increase confidence.
-            if ((countryCandidates == null || countryCandidates.size() <= 1)
-                    && (cityCandidates == null || cityCandidates.size() <= 1)) {
+            if ((countryCandidates == null || countryCandidates.isEmpty())
+                    && (cityCandidates == null || cityCandidates.isEmpty())) {
                 return stateCandidates.iterator().next();
             }
         }
@@ -122,8 +122,8 @@ public class DefaultLocationParser implements LocationParser {
             // in this point we are sure about which country we have.
             // we can check if we have cities or states and cross them to
             // increase confidence.
-            if ((stateCandidates == null || stateCandidates.size() <= 1)
-                    && (cityCandidates == null || cityCandidates.size() <= 1)) {
+            if ((stateCandidates == null || stateCandidates.isEmpty())
+                    && (cityCandidates == null || cityCandidates.isEmpty())) {
                 return countryCandidates.iterator().next();
             }
         }
