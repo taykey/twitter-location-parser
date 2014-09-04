@@ -20,7 +20,7 @@
 
 	<scm>
 		<url>https://github.com/taykey/twitter-location-parser</url>
-		<connection>https://github.com/taykey/twitter-location-parser</connection>
+		<connection>scm:git:https://github.com/taykey/twitter-location-parser</connection>
 	</scm>
 
 	<developers>
@@ -63,6 +63,31 @@
 					<target>1.6</target>
 				</configuration>
 			</plugin>
+
+			<plugin>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
+			<plugin>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>2.1.2</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+
 			<plugin>
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.9</version>
