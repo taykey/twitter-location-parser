@@ -92,6 +92,29 @@
 				<artifactId>maven-surefire-plugin</artifactId>
 				<version>2.9</version>
 			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<configuration>
+					<allowTimestampedSnapshots>true</allowTimestampedSnapshots>
+					<stagingRepository>central::default::http://tk001:8081/artifactory/libs-release-local
+					</stagingRepository>
+				</configuration>
+			</plugin>
 		</plugins>
 	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>central</id>
+			<name>Artifactory Server</name>
+			<url>http://tk001:8081/artifactory/libs-release-local</url>
+		</repository>
+		<snapshotRepository>
+			<id>central</id>
+			<name>Artifactory Server</name>
+			<url>http://tk001:8081/artifactory/libs-snapshot-local</url>
+		</snapshotRepository>
+	</distributionManagement>
 </project>
